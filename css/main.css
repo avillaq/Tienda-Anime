@@ -9,9 +9,11 @@ html {
 body {
     font-family: "Open Sans",Verdana,sans-serif;
     font-size: 1.6rem;
-    line-height: 2; /*Interlineado*/
+    line-height: 1.6; /*Interlineado*/
     margin: 0;
     padding: 0;
+    background-color: #282828;
+
 }
 img {
     max-width: 100%; /*Imagen responsiva*/
@@ -27,6 +29,10 @@ a{
     display: inline-block;
     text-decoration: none;
     color: #fff;
+}
+h3{
+    margin: 0;
+    line-height: 1.4;
 }
 .wrapper {
     width: 95%;
@@ -62,3 +68,26 @@ a{
 }
 
 /**/
+.servicios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.gratis, .originales, .dias{
+    border-radius: 1rem;
+    border: 2px dashed #fff;
+    background-color: #242323;
+    width: 20%;
+    margin: 0 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    
+}
+.servicios i,h3{
+    font-size: 3rem;
+}
+.servicios p{
+    display: inline-block;
+    margin: 0;
+}
