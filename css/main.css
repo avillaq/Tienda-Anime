@@ -12,8 +12,8 @@ body {
     line-height: 1.6; /*Interlineado*/
     margin: 0;
     padding: 0;
-    background-color: #282828;
-
+    background-color: #353030;
+    color: #fff;
 }
 img {
     max-width: 100%; /*Imagen responsiva*/
@@ -30,12 +30,17 @@ a{
     text-decoration: none;
     color: #fff;
 }
+h2{
+    display: inline-block;
+    margin: 0;
+}
 h3{
     margin: 0;
     line-height: 1.4;
+    font-size: 3rem;
 }
 .wrapper {
-    width: 95%;
+    width: 80%;
     margin: 0 auto; /*Contenedor centrado*/
 }
 /*Side header*/
@@ -67,27 +72,72 @@ h3{
     margin: 0 2rem;
 }
 
-/**/
+/* Servcios */
 .servicios{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
 }
+
 .gratis, .originales, .dias{
     border-radius: 1rem;
-    border: 2px dashed #fff;
+    border: 2px dashed #4f4848;
     background-color: #242323;
-    width: 20%;
-    margin: 0 1rem;
+    width: 35rem;
+    height: 24rem;
+    margin: 1rem 1rem;
     padding: 3rem 2rem;
     text-align: center;
     
 }
-.servicios i,h3{
-    font-size: 3rem;
+@media (min-width: 768px){
+    .servicios{
+        flex-direction: row;
+    }
+    .gratis, .originales, .dias{
+        height: 28rem;  
+    }
+}
+@media (min-width: 992px){
+    .gratis, .originales, .dias{
+        height: 24rem;
+    }
+}
+.servicios i{
+    font-size: 4rem;
 }
 .servicios p{
     display: inline-block;
     margin: 0;
 }
+
+/* Productos*/
+.side-productos{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    border-bottom: 1px solid #fff;
+    align-items: center;
+}
+.side-productos .btn-verCategorias{
+    background-color: #474747;
+    padding: 0 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.side-productos .btn-verCategorias:hover{
+    transform: scale(1.1);
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 22rem;
+    margin: 0 1rem;
+}
+
