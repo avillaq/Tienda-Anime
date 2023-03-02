@@ -1,0 +1,64 @@
+/*Añadir normalize.css al proyecto para mejores resultados*/
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size:62.5%; /*1rem = 10px*/
+}
+body {
+    font-family: "Open Sans",Verdana,sans-serif;
+    font-size: 1.6rem;
+    line-height: 2; /*Interlineado*/
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%; /*Imagen responsiva*/
+    width: 100%;
+    display: inline-block;
+}
+ul {
+    margin: 0; /*Elimina estacios en blaco innecesarios*/
+    padding: 0; /*Elimina estacios en blaco innecesarios*/
+    list-style: none; /*Elimina los puntos que aconpañan a las listas*/
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+.wrapper {
+    width: 95%;
+    margin: 0 auto; /*Contenedor centrado*/
+}
+/*Side header*/
+.side-header{
+    background-color: #282828;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo .logo-img{
+    width: 10%;
+    margin: 0 4rem;
+}
+.logo .logo-title{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.user-menu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.user-menu a{
+    margin: 0 2rem;
+}
+
+/**/
