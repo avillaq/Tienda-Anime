@@ -49,8 +49,8 @@
             </div>
         </div>
 
-        <div class="container-productos wrapper">
-            <div class="side-productos">
+        <div class="wrapper">
+            <div class="container-productos">
                 <h2>TODOS NUESTROS PRODUCTOS</h2>
                 <a href="#" class="btn-verCategorias">Ver todas las categorias</a>
             </div>
@@ -59,7 +59,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -68,7 +68,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -77,7 +77,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -86,7 +86,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -95,7 +95,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -104,7 +104,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -113,7 +113,7 @@
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
-                        <a href="#">Figuras de acción de Anime de ataque a los Titanes</a>
+                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
                         <p><small>$ 10</small></p>
                     </div>
                 
@@ -124,6 +124,30 @@
         </div>
 
     </main>
+    <footer>
+        <div class="container-footer">
+            <div class="info-footer">
+                <div class="menu-footer">
+                    <p>Menu</p>
+                    <a href="#">Inicio</a>
+                    <a href="#">Categoria</a>
+                </div>
+                <div class="contacto-footer">
+                    <p>Contacto</p>
+                    <a href="#">villafuertequispealex@gmail.com</a>
+                </div>
+                <div class="redes-footer">
+                    <a href="" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" ><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" ><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy;2023 Tienda Anime - All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
     
 </body>
 </html>
