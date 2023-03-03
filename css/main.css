@@ -251,6 +251,10 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+.detalles-producto .container-cantidad a:hover{
+    background-color: #178225;
 }
 
 /*info detalles*/

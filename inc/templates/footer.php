@@ -5,7 +5,7 @@
                 <div class="menu-footer">
                     <p>Menu</p>
                     <a href="index.php">Inicio</a>
-                    <a href="categorias.php">Categoria</a>
+                    <a href="categorias.php">Categorias</a>
                 </div>
                 <div class="contacto-footer">
                     <p>Contacto</p>
