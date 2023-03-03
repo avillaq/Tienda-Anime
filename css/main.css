@@ -173,7 +173,7 @@ h3{
     display: block;
     font-size: 1.3rem;
     color: #b1b1b1;
-    transform: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
 }
 .info-footer a:hover{
     color: #fff;

@@ -20,7 +20,7 @@
         <div class="side-header">
             <div class="logo">
                 <img class="logo-img" src="img/logo.png" alt="Logo">
-                <a href="#" class="logo-title">TIENDA ANIME</a>
+                <a href="index.php" class="logo-title">TIENDA ANIME</a>
             </div>
 
             <div class="user-menu">
@@ -129,17 +129,17 @@
             <div class="info-footer">
                 <div class="menu-footer">
                     <p>Menu</p>
-                    <a href="#">Inicio</a>
-                    <a href="#">Categoria</a>
+                    <a href="index.php">Inicio</a>
+                    <a href="categoria.php">Categoria</a>
                 </div>
                 <div class="contacto-footer">
                     <p>Contacto</p>
-                    <a href="#">villafuertequispealex@gmail.com</a>
+                    <a href="mailto:villafuertequispealex@gmail.com">villafuertequispealex@gmail.com</a>
                 </div>
                 <div class="redes-footer">
-                    <a href="" ><i class="fa-brands fa-facebook"></i></a>
-                    <a href="" ><i class="fa-brands fa-twitter"></i></a>
-                    <a href="" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100008164993137" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/villafu00911721" ><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/avillaq" ><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
             <div class="copyright">
