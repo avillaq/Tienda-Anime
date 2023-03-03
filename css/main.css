@@ -200,3 +200,85 @@ h3{
     text-align: center;
     color: #b1b1b1;
 }
+
+/***************** Detalles *************/
+.container-detalles{
+    display: flex;
+    justify-content: center;
+    background: rgb(194,123,24);
+    background: linear-gradient(90deg, rgba(194,123,24,1) 0%, rgba(52,39,39,1) 0%, rgba(93,2,2,1) 100%);
+}
+.detalles{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+}
+.detalles img{
+    width: 70%;
+}
+.detalles .detalles-producto{
+    background-color: #101010;
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+}
+.detalles-producto small{
+    color: #77a464;
+}
+.detalles-producto p{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.detalles-producto .container-cantidad{
+    display: flex;
+    gap: 1rem;
+}
+
+.detalles-producto .container-cantidad input[type="number"]{
+    outline: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    height: 4rem;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+    display: block;
+}
+.detalles-producto .container-cantidad a{
+    border-radius: 0.5rem;
+    background-color: #35bb47;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*info detalles*/
+.info-detalles{
+    margin: 4rem 0;
+}
+.info-detalles p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+.garantia, .devoluciones{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+.info-detalles .span-icon{ 
+    background-color: #fff;
+    color: #E92E5D;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.devoluciones p span, .garantia p span{
+    font-weight: 400;
+    color: #aaa;
+}
