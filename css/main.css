@@ -47,7 +47,7 @@ h3{
 .side-header{
     background-color: #282828;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .logo{
@@ -61,6 +61,12 @@ h3{
 .logo .logo-title{
     font-size: 3rem;
     font-weight: 800;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    font-size: 2.1rem;
+    justify-content: space-evenly;
 }
 
 .user-menu{
