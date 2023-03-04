@@ -314,3 +314,56 @@ h3{
     background-color: #ffe4eb;
     color: #c36;
 }
+
+/************ Carrito de compras***********/
+.container-carrito{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Lista*/
+.container-lista .item-list{
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #474747;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+.container-lista .item-list img{
+    width: 20%;
+}
+.item-list .item-detalle p{
+    margin: 0.6rem 0;
+}
+.item-list .item-detalle a{
+    border-radius: 0.5rem;
+    background-color: #c32b20;
+    width: 50%;
+    padding: 0.4rem 0;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+.item-list .item-detalle a:hover{
+    background-color: #f90707;
+}
+
+/*Resumen*/
+.container-resumen{
+    border-radius: 0.5rem;
+    border: 1px solid #fff;
+    height: 17rem;
+    padding: 0 1rem 1rem 1rem;
+}
+.container-resumen  h4{
+    text-align: center;
+}
+.container-resumen a{
+    border-radius: 0.5rem;
+    background-color: #289036;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container-resumen a:hover{
+    background-color: #1fce13;
+}
