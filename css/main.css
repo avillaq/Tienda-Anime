@@ -43,6 +43,7 @@ h3{
     width: 80%;
     margin: 0 auto; /*Contenedor centrado*/
 }
+
 /*Side header*/
 .side-header{
     background-color: #282828;
@@ -117,6 +118,7 @@ h3{
     display: inline-block;
     margin: 0;
 }
+/***************** Inicio **************************/
 
 /* Productos*/
 .container-productos{
@@ -285,4 +287,30 @@ h3{
 .devoluciones p span, .garantia p span{
     font-weight: 400;
     color: #aaa;
+}
+
+/*********** Categorias ***********/
+
+.container-categorias{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-categoria{
+    display: flex;
+    flex-direction: column;
+    max-width: 18rem;
+    margin: 0 1rem 3rem 1rem;
+}
+.card-categoria a{
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    color: #363636;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.card-categoria a:hover{
+    background-color: #ffe4eb;
+    color: #c36;
 }
