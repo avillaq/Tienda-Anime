@@ -13,7 +13,7 @@
 
     <div class="wrapper">
         <div class="productos">
-                <div class="card">
+                <!-- <div class="card">
                     <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
                     <div class="descripcion">
                         <p><small>Figuras de Anime</small></p>
@@ -21,16 +21,11 @@
                         <p><small>$ 10</small></p>
                     </div>
                 
-                </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
-                
-                </div>
+                </div> -->
+                <img src="img/categorias/sin-productos.png" alt="" class="img-sin-productos">
+                <div class="text-sin-productos">
+                    <p>Esta categoria aun no tiene productos!!</p>
+                </div>                
         </div>
     </div>
     

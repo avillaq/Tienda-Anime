@@ -141,7 +141,7 @@ h3{
 .productos{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 .card{
     display: flex;
@@ -390,4 +390,18 @@ h3{
     font-weight: 900;
     font-size: 4.5rem;
     margin: 0;
+}
+
+/* En caso no haya ningun producto*/
+.productos .img-sin-productos{
+    width: 50%;
+}
+.productos .text-sin-productos{
+    display: flex;
+    align-items: center;
+}
+.productos .text-sin-productos p{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-left: 1rem;
 }
