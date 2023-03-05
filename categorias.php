@@ -3,43 +3,25 @@
 ?>
     <div class="wrapper">
         <h4>NUESTRAS CATEGORÍAS DE PRODUCTOS EN FUNCIÓN DEL ANIME</h4>
+
+        <?php
+        try {
+            require "inc/funciones/conexionbd.php";
+            $sql = "SELECT * FROM categorias";
+            $respuesta = $conn->query($sql);
+
+        } catch (Exception $e) {
+            echo "Error: ".$e->getMessage();
+        }
+
+        ?>
         <div class="container-categorias">
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Shingeki No Kyojin</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
-            <div class="card-categoria">
-                <img src="img/categorias/1187146-300x300.webp" alt="">
-                <a href="">Spy X Family</a>
-            </div>
+            <?php while($categoria=$respuesta->fetch_assoc()) { ?>
+                <div class="card-categoria">
+                    <img src="img/categorias/<?php echo $categoria["url_img"]?>" alt="">
+                    <a href=""><?php echo $categoria["nombre_categoria"]?></a>
+                </div>
+            <?php }?>
         </div>
     </div>
 
