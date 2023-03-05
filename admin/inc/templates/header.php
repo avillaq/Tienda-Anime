@@ -30,8 +30,10 @@
     <main>
         <div class="navegacion">
             <h2><i class="fa fa-user"></i> Admin</h2>
-            <a href="index.php">Dashboard</a>
-            <a href="usuarios.php">Usuarios</a>
-            <a href="productos.php">Productos</a>
-            <a href="categorias.php">Categorias</a>
+            <div id="nav-menu">
+                <a class="btn-menu active" href="index.php">Dashboard</a>
+                <a class="btn-menu" href="usuarios.php">Usuarios</a>
+                <a class="btn-menu" href="productos.php">Productos</a>
+                <a class="btn-menu" href="categorias.php">Categorias</a>
+            </div>
         </div>

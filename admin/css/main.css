@@ -95,6 +95,9 @@ main {
 .navegacion a:hover{
     background-color: #666666;
 }
+.active{
+    background-color: #282828;
+}
 
 /*Footer*/
 .copyright{
@@ -110,5 +113,5 @@ main {
 
 /* Categoria Contenido*/
 .contenido-categorias{
-    
+
 }
