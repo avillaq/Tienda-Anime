@@ -140,15 +140,27 @@ main {
     border-spacing: 0;
 }
 .contenedor-lista table img{
-    width: 15rem;
-}
-.contenedor-lista table th{
-    padding: 2rem 0;
-    font-size: 2rem;
-
+    width: 13rem;
 }
 .contenedor-lista table th,td{
     padding: 0.5rem 0;
     border-bottom: 7px solid #353030;
-    background-color: #3b3b3b;
+    background-color: #4e4471;
+}
+.contenedor-lista table th{
+    padding: 2rem 0;
+    font-size: 2rem;
+    background-color: #481f70;
+}
+/*Botones de editar y borrar*/
+.btn-editar,.btn-borrar{
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-left: 0.5rem;
+}
+.btn-editar{
+    background-color: #00a6d7;
+}
+.btn-borrar{
+    background-color: #ffa500;
 }

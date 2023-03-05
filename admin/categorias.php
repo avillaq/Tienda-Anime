@@ -22,8 +22,9 @@ require "inc/templates/header.php";
                             <td>Figura de accion</td>
                             <td><img src="../img/categorias/spy.webp" alt=""></td>
                             <td>
-                                <a class="btn btn-editar" href="editar.php?id="><i class="fas fa-pen-square"></i></a>
-                                <button data-id="" type="button" class="btn btn-borrar"><i class="fas fa-trash-alt"></i></button>
+                                <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
+                                <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
+
                             </td>
                         </tr>
 
@@ -31,12 +32,9 @@ require "inc/templates/header.php";
                             <td>Figura de accion</td>
                             <td><img src="../img/categorias/spy.webp" alt=""></td>
                             <td>
-                                <a class="btn btn-editar" href="editar.php?id=">
-                                <i class="fas fa-pen-square"></i> 
-                                </a>
-                                <button data-id="" type="button" class="btn btn-borrar">
-                                <i class="fas fa-trash-alt"></i> 
-                                </button>
+                                <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
+                                <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
+
                             </td>
                         </tr>
 
@@ -44,14 +42,13 @@ require "inc/templates/header.php";
                             <td>Figura de accion</td>
                             <td><img src="../img/categorias/spy.webp" alt=""></td>
                             <td>
-                                <a class="btn btn-editar" href="editar.php?id=">
-                                <i class="fas fa-pen-square"></i> 
-                                </a>
-                                <button data-id="" type="button" class="btn btn-borrar">
-                                <i class="fas fa-trash-alt"></i> 
-                                </button>
+                                <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
+                                <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
+
                             </td>
                         </tr>
+
+                        
                     </tbody>
                     
                 </table>
