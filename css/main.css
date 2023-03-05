@@ -57,7 +57,7 @@ h3{
 }
 .logo .logo-img{
     width: 10%;
-    margin: 0 4rem;
+    margin: 0.5rem 4rem;
 }
 .logo .logo-title{
     font-size: 3rem;
@@ -124,7 +124,7 @@ h3{
 .container-productos{
     display: flex;
     justify-content: space-between;
-    margin: 3rem 0;
+    margin-top: 3rem;
     border-bottom: 1px solid #fff;
     align-items: center;
 }
@@ -141,6 +141,7 @@ h3{
 .productos{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 3rem;
 }
 .card{
     display: flex;
@@ -370,8 +371,7 @@ h3{
 
 /****************** Productos por Categoria ********************/
 .bg-categoria-producto{
-    background: rgb(194,123,24);
-background: linear-gradient(90deg, rgba(194,123,24,1) 0%, rgba(224,69,91,1) 0%, rgba(18,6,8,1) 100%);
+    background: linear-gradient(241deg,#1d1919 10%,#F2295B61 100%);
     display: flex;
     justify-content: end;
     height: 25rem;
@@ -384,6 +384,7 @@ background: linear-gradient(90deg, rgba(194,123,24,1) 0%, rgba(224,69,91,1) 0%, 
 .title-categoria-producto p{
     color: #ed537a;
     margin:0;
+    font-size: 2rem;
 }
 .title-categoria-producto h1{
     font-weight: 900;
