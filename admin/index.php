@@ -26,20 +26,24 @@
         </div>
     </header>
     <main>
-        <div class="container-main">
-            <div class="navegacion">
-                <h2><i class="fa fa-user"></i> Admin</h2>
-                <a href="">Dashboard</a>
-                <a href="">Usuarios</a>
-                <a href="">Productos</a>
-                <a href="">Categorias</a>
-            </div>
-            <div class="contenido">
-
-            </div>
+        <div class="navegacion">
+            <h2><i class="fa fa-user"></i> Admin</h2>
+            <a href="">Dashboard</a>
+            <a href="">Usuarios</a>
+            <a href="">Productos</a>
+            <a href="">Categorias</a>
+        </div>
+        <div class="contenido">
 
         </div>
+
+ 
     </main>
+    <footer>
+        <div class="copyright">
+            <p>&copy;2023 Tienda Anime - All Rights Reserved.</p>
+        </div>
+    </footer>
    
     
 </body>

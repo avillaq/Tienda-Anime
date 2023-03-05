@@ -69,9 +69,7 @@ h3{
 }
 
 /* Navegacion */
-.container-main{
-}
-.container-main .navegacion{
+.navegacion{
     background-color: #3b3b3b;
     width: 25rem;
     height: 100vh;
@@ -93,4 +91,17 @@ h3{
 }
 .navegacion a:hover{
     background-color: #666666;
+}
+
+/*Footer*/
+
+.copyright{
+    background-color: #1d1d1d;
+}
+.copyright p{
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #b1b1b1;
 }
