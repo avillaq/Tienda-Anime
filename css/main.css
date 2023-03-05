@@ -56,8 +56,8 @@ h3{
     align-items: center;
 }
 .logo .logo-img{
-    width: 10%;
-    margin: 0.5rem 4rem;
+    width: 5rem;
+    margin: 0.5rem 2rem 0.5rem 3rem;
 }
 .logo .logo-title{
     font-size: 3rem;
