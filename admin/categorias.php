@@ -8,7 +8,7 @@ require "inc/templates/header.php";
                 <a href="">Crear nueva Categoria</a>
             </div>
 
-            <div class="contenedor-lista">
+            <!-- <div class="contenedor-lista">
                 <table>
                     <thead>
                         <tr>
@@ -53,11 +53,19 @@ require "inc/templates/header.php";
                     
                 </table>
 
-            </div>
-
-            <!-- <div class="contenedor-crear">
-                HOlS
             </div> -->
+
+            <div class="contenedor-crear">
+                <form action="">
+                    <label for="nombre_categoria">Nombre: </label>
+                    <input type="text" name="nombre_categoria" id="nombre_categoria">
+                    
+                    <label for="imagen_categoria">Imagen: </label>
+                    <input type="file" name="imagen_categoria" id="imagen_categoria">
+
+                    <input type="submit" value="Crear">
+                </form>
+            </div>
         </div>
     </div>
 
