@@ -20,12 +20,26 @@
         <div class="side-header">
             <div class="logo">
                 <img class="logo-img" src="../img/logo.png" alt="Logo">
-                <a href="index.php" class="logo-title">TIENDA ANIME</a>
+                <a href="index.php" class="logo-title">TIENDA ANIME - <small>Administracion</small></a>
             </div>
             <a href="#" class="btn-out"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a>
-  
         </div>
     </header>
+    <main>
+        <div class="container-main">
+            <div class="navegacion">
+                <h2><i class="fa fa-user"></i> Admin</h2>
+                <a href="">Dashboard</a>
+                <a href="">Usuarios</a>
+                <a href="">Productos</a>
+                <a href="">Categorias</a>
+            </div>
+            <div class="contenido">
+
+            </div>
+
+        </div>
+    </main>
    
     
 </body>
