@@ -67,6 +67,9 @@ h3{
 .side-header .btn-out{
     margin: 0 2rem;
 }
+main {
+    display: flex;
+}
 
 /* Navegacion */
 .navegacion{
@@ -94,7 +97,6 @@ h3{
 }
 
 /*Footer*/
-
 .copyright{
     background-color: #1d1d1d;
 }
@@ -104,4 +106,9 @@ h3{
     font-size: 1.4rem;
     text-align: center;
     color: #b1b1b1;
+}
+
+/* Categoria Contenido*/
+.contenido-categorias{
+    
 }
