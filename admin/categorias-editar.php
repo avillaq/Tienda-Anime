@@ -6,7 +6,7 @@ require "inc/templates/header.php";
 
             <div class="contenedor-editar" id="contenedor-editar">
                 <p>Edita categorias</p>
-                <form action="">
+                <form id="formulario">
                     <label for="nombre_categoria">Nombre: </label>
                     <input type="text" name="nombre_categoria" id="nombre_categoria" class="input-nombre" placeholder="Nombre de la categoria">
                     

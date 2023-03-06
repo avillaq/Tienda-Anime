@@ -6,6 +6,7 @@
     </footer>
    
     <script src="js/app.js"></script>
+    <script src="js/admin-fetch.js"></script>
     
 </body>
 </html>
