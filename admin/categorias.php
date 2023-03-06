@@ -33,7 +33,7 @@ require "inc/templates/header.php";
                             <td><?php echo $categoria["nombre_categoria"]?></td>
                             <td><img src="../img/categorias/<?php echo $categoria["url_img"]?>" alt=""></td>
                             <td>
-                                <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
+                                <a class="btn-editar" href="categorias-editar.php?id=<?php echo $categoria["id_categoria"]?>"><i class="fa-solid fa-pen"></i></a>
                                 <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
 
                             </td>

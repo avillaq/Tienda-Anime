@@ -142,7 +142,7 @@ main {
     background-color: #3b3b3b !important;
 }
 
-.contenedor-option .contenedor-lista, .contenedor-añadir{
+.contenedor-option .contenedor-lista, .contenedor-añadir, .contenedor-editar{
     margin-top: 1rem;
 }
 .contenedor-lista table{
@@ -177,8 +177,8 @@ main {
     background-color: #ffa500;
 }
 
-
-.contenedor-option .contenedor-añadir{
+/*Craer nuevo registro*/
+.contenedor-option .contenedor-añadir, .contenedor-editar{
     display: none;
     flex-direction: column;
     align-items: center;
@@ -187,12 +187,12 @@ main {
     border-radius: 1rem;
 }
 
-input, .contenedor-añadir p{
+input, .contenedor-añadir p, .contenedor-editar p{
     font-family: inherit;
     font-size: 1.8rem;
 }
 
-.contenedor-option .contenedor-añadir form{
+.contenedor-option .contenedor-añadir form, .contenedor-option .contenedor-editar form{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -231,3 +231,8 @@ input[type="submit"]{
     width: 12rem;
 }
 
+/* Pagina de editar*/
+
+.contenedor-option  .contenedor-editar{
+    display: flex;
+}
