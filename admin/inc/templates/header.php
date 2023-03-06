@@ -36,8 +36,8 @@
                 $file_name = basename($path, ".php");
                 ?>
                 <a class="btn-menu <?php echo ($file_name === "index")? "active" : "";?>" href="index.php">Dashboard</a>
-                <a class="btn-menu <?php echo ($file_name === "usuarios")? "active" : "";?>" href="usuarios.php">Usuarios</a>
-                <a class="btn-menu <?php echo ($file_name === "productos")? "active" : "";?>" href="productos.php">Productos</a>
-                <a class="btn-menu <?php echo ($file_name === "categorias")? "active" : "";?>" href="categorias.php">Categorias</a>
+                <a class="btn-menu <?php echo ($file_name === "usuarios" || $file_name === "usuarios-editar")? "active" : "";?>" href="usuarios.php">Usuarios</a>
+                <a class="btn-menu <?php echo ($file_name === "productos" || $file_name === "productos-editar")? "active" : "";?>" href="productos.php">Productos</a>
+                <a class="btn-menu <?php echo ($file_name === "categorias" || $file_name === "categorias-editar")? "active" : "";?>" href="categorias.php">Categorias</a>
             </div>
         </div>

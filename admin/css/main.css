@@ -196,7 +196,7 @@ input, .contenedor-añadir p, .contenedor-editar p{
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: 3rem;
+    gap: 2rem;
     padding: 1rem 0 2rem 0;
 }
 form .input-nombre{
@@ -218,7 +218,6 @@ form .input-nombre{
     padding: 1rem;
     border-radius: 0.5rem;
 }
-
 .container-input-submit{
     display: flex;
     justify-content: center;
@@ -232,7 +231,6 @@ input[type="submit"]{
 }
 
 /* Pagina de editar*/
-
 .contenedor-option  .contenedor-editar{
     display: flex;
 }
