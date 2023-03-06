@@ -18,37 +18,30 @@ require "inc/templates/header.php";
                         </tr>
                     </thead>
                     <tbody>
+                    <?php
+                        try {
+                            require "inc/funciones/conexionbd.php";
+                            $sql = "SELECT * FROM categorias";
+                            $respuesta = $conn->query($sql);
+
+                        } catch (Exception $e) {
+                            echo "Error: ".$e->getMessage();
+                        }
+                    ?>
+                    <?php while($categoria=$respuesta->fetch_assoc()){?>
                         <tr>
-                            <td>Figura de accion</td>
-                            <td><img src="../img/categorias/spy.webp" alt=""></td>
+                            <td><?php echo $categoria["nombre_categoria"]?></td>
+                            <td><img src="../img/categorias/<?php echo $categoria["url_img"]?>" alt=""></td>
                             <td>
                                 <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
                                 <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
 
                             </td>
                         </tr>
-
-                        <tr>
-                            <td>Figura de accion</td>
-                            <td><img src="../img/categorias/spy.webp" alt=""></td>
-                            <td>
-                                <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
-                                <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Figura de accion</td>
-                            <td><img src="../img/categorias/spy.webp" alt=""></td>
-                            <td>
-                                <a class="btn-editar" href="editar.php?id="><i class="fa-solid fa-pen"></i></a>
-                                <a class="btn-borrar" href=""><i class="fa-solid fa-trash-can"></i></a>
-
-                            </td>
-                        </tr>
-
-                        
+                    <?php }
+                        $conn->close();
+                    ?>
+  
                     </tbody>
                     
                 </table>
