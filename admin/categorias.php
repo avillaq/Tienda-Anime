@@ -5,7 +5,7 @@ require "inc/templates/header.php";
         <div class="contenedor-option">
             <div class="contenedor-lista-crear">
                 <a href="">Lista de Categorias</a>
-                <a href="">Crear nueva Categoria</a>
+                <a href="">Añadir</a>
             </div>
 
             <!-- <div class="contenedor-lista">
@@ -56,14 +56,17 @@ require "inc/templates/header.php";
             </div> -->
 
             <div class="contenedor-crear">
+                <p>Crear una nueva categoria</p>
                 <form action="">
-                    <label for="nombre_categoria">Nombre: </label>
-                    <input type="text" name="nombre_categoria" id="nombre_categoria">
                     
-                    <label for="imagen_categoria">Imagen: </label>
-                    <input type="file" name="imagen_categoria" id="imagen_categoria">
-
-                    <input type="submit" value="Crear">
+                    <input type="text" name="nombre_categoria" id="nombre_categoria" class="input-nombre" placeholder="Nombre de la categoria">
+                    
+                    <div class="container-input-file">
+                        <input type="file" name="imagen_categoria" id="imagen_categoria" class="input-file">
+                    </div>
+                    <div class="container-input-submit">
+                        <input type="submit" value="Añadir">
+                    </div>
                 </form>
             </div>
         </div>

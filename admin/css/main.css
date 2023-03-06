@@ -131,7 +131,7 @@ main {
     background-color: #3b3b3b;
     padding: 1rem;
 }
-.contenedor-option .contenedor-lista{
+.contenedor-option .contenedor-lista, .contenedor-crear{
     margin-top: 1rem;
 }
 .contenedor-lista table{
@@ -163,4 +163,61 @@ main {
 }
 .btn-borrar{
     background-color: #ffa500;
+}
+
+input, .contenedor-crear p{
+    font-family: inherit;
+    font-size: 1.8rem;
+
+}
+.contenedor-option .contenedor-crear{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6dfff;
+    color: #000;
+    border-radius: 1rem;
+}
+
+.contenedor-option .contenedor-crear form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2rem;
+    padding: 1rem 0 2rem 0;
+}
+form .input-nombre{
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #353030;
+    padding-left: 0.5rem;
+    background-color: #e6dfff;
+}
+form .input-file{
+    cursor: pointer;
+}
+.container-input-file{
+    border-bottom: 1px solid #353030;
+    padding-bottom: 0.5rem;
+}
+::-webkit-file-upload-button {
+    border: 0;
+    background-color: #6841db;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.container-input-submit{
+    display: flex;
+    justify-content: center;
+}
+.container-input-submit input[type="submit"]{
+    width: 12rem;
+    padding: 1rem;
+    background-color: #6841db;
+    border: 0;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
