@@ -3,12 +3,12 @@ require "inc/templates/header.php";
 ?>
     <div class="container">
         <div class="contenedor-option">
-            <div class="contenedor-lista-crear">
-                <a href="">Lista de Categorias</a>
-                <a href="">Añadir</a>
+            <div class="contenedor-lista-crear" id="contenedor-lista-crear">
+                <a href="" class="btn-lista selected">Lista de Categorias</a>
+                <a href="" class="btn-añadir">Añadir una categoria</a>
             </div>
 
-            <!-- <div class="contenedor-lista">
+            <div class="contenedor-lista" id="contenedor-lista">
                 <table>
                     <thead>
                         <tr>
@@ -53,10 +53,10 @@ require "inc/templates/header.php";
                     
                 </table>
 
-            </div> -->
+            </div>
 
-            <div class="contenedor-crear">
-                <p>Crear una nueva categoria</p>
+            <div class="contenedor-añadir" id="contenedor-añadir">
+                <p>Crea una nueva categoria</p>
                 <form action="">
                     
                     <input type="text" name="nombre_categoria" id="nombre_categoria" class="input-nombre" placeholder="Nombre de la categoria">
@@ -69,6 +69,8 @@ require "inc/templates/header.php";
                     </div>
                 </form>
             </div>
+
+
         </div>
     </div>
 

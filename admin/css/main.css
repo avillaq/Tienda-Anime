@@ -73,10 +73,12 @@ main {
 
 /* Navegacion */
 .navegacion{
+    display: flex;
+    flex-direction: column;
     background-color: #3b3b3b;
     width: 25rem;
-    height: 100vh;
     padding: 0 0.5rem;
+    min-height: 100vh;
 }
 .navegacion h2{
     padding: 2rem 0;
@@ -128,10 +130,19 @@ main {
     flex-grow: 1;
     text-align: center;
     font-size: 2rem;
-    background-color: #3b3b3b;
+    background-color: #353030;
     padding: 1rem;
+    transition: background-color 0.2s ease-in-out;
 }
-.contenedor-option .contenedor-lista, .contenedor-crear{
+.contenedor-option .contenedor-lista-crear a:hover{
+    background-color: #3b3b3b;
+}
+.selected{
+    border-bottom: 3px solid #6841db;
+    background-color: #3b3b3b !important;
+}
+
+.contenedor-option .contenedor-lista, .contenedor-añadir{
     margin-top: 1rem;
 }
 .contenedor-lista table{
@@ -152,6 +163,7 @@ main {
     font-size: 2rem;
     background-color: #481f70;
 }
+
 /*Botones de editar y borrar*/
 .btn-editar,.btn-borrar{
     border-radius: 0.5rem;
@@ -165,13 +177,9 @@ main {
     background-color: #ffa500;
 }
 
-input, .contenedor-crear p{
-    font-family: inherit;
-    font-size: 1.8rem;
 
-}
-.contenedor-option .contenedor-crear{
-    display: flex;
+.contenedor-option .contenedor-añadir{
+    display: none;
     flex-direction: column;
     align-items: center;
     background-color: #e6dfff;
@@ -179,11 +187,16 @@ input, .contenedor-crear p{
     border-radius: 1rem;
 }
 
-.contenedor-option .contenedor-crear form{
+input, .contenedor-añadir p{
+    font-family: inherit;
+    font-size: 1.8rem;
+}
+
+.contenedor-option .contenedor-añadir form{
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: 2rem;
+    gap: 3rem;
     padding: 1rem 0 2rem 0;
 }
 form .input-nombre{
@@ -193,14 +206,12 @@ form .input-nombre{
     padding-left: 0.5rem;
     background-color: #e6dfff;
 }
-form .input-file{
-    cursor: pointer;
-}
+
 .container-input-file{
     border-bottom: 1px solid #353030;
     padding-bottom: 0.5rem;
 }
-::-webkit-file-upload-button {
+::-webkit-file-upload-button, input[type="submit"] {
     border: 0;
     background-color: #6841db;
     color: #fff;
@@ -212,12 +223,11 @@ form .input-file{
     display: flex;
     justify-content: center;
 }
-.container-input-submit input[type="submit"]{
-    width: 12rem;
-    padding: 1rem;
-    background-color: #6841db;
-    border: 0;
-    color: #fff;
-    border-radius: 0.5rem;
+
+input[type="file"] , input[type="submit"]{
     cursor: pointer;
 }
+input[type="submit"]{
+    width: 12rem;
+}
+
