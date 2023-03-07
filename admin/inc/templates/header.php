@@ -33,11 +33,27 @@
             <div id="nav-menu">
                 <?php
                 $path = $_SERVER["PHP_SELF"];
-                $file_name = basename($path, ".php");
+                $file_name = basename($path, ".php"); /* Falta : <?php echo ($file_name === "index")? "active" : "";?>*/ 
                 ?>
-                <a class="btn-menu <?php echo ($file_name === "index")? "active" : "";?>" href="index.php">Dashboard</a>
-                <a class="btn-menu <?php echo ($file_name === "usuarios" || $file_name === "usuarios-editar")? "active" : "";?>" href="usuarios.php">Usuarios</a>
-                <a class="btn-menu <?php echo ($file_name === "productos" || $file_name === "productos-editar")? "active" : "";?>" href="productos.php">Productos</a>
-                <a class="btn-menu <?php echo ($file_name === "categorias" || $file_name === "categorias-editar")? "active" : "";?>" href="categorias.php">Categorias</a>
+
+                <a class="btn-index" href="index.php">Dashboard</a>
+
+                <a id="btn-usuarios" href="#">Usuarios</a>
+                <ul id="sub-usuarios">
+                    <li><a href="usuarios-lista.php">Lista de usuarios</a></li>
+                    <li><a href="usuarios-crear.php">Crear usuarios</a></li>
+                </ul>
+
+                <a id="btn-productos" href="#">Productos</a>
+                <ul id="sub-productos">
+                    <li><a href="productos-lista.php">Lista de productos</a></li>
+                    <li><a href="productos-crear.php">Crear productos</a></li>
+                </ul>
+
+                <a id="btn-categorias" href="#">Categorias</a>
+                <ul id="sub-categorias">
+                    <li><a href="categorias-lista.php">Lista de categorias</a></li>
+                    <li><a href="categorias-crear.php">Crear categorias</a></li>
+                </ul>
             </div>
         </div>

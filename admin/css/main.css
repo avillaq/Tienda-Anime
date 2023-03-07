@@ -105,6 +105,20 @@ main {
     background-color: #6841db;
 }
 
+.navegacion ul{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+}
+.navegacion ul a{
+    font-size: 1.5rem;
+    padding-left: 3.2rem;
+}
+
+.navegacion .show{
+    height: 9rem;
+}
+
 /*Footer*/
 .copyright{
     background-color: #1d1d1d;
@@ -127,23 +141,11 @@ main {
     width: 70%;
     margin-top: 2rem;
 }
-.contenedor-option .contenedor-lista-crear{
-    display: flex;
-}
-.contenedor-option .contenedor-lista-crear a{
-    flex-grow: 1;
+.contenedor-option h2{
     text-align: center;
-    font-size: 2rem;
-    background-color: #353030;
+    background-color: #3b3b3b ;
     padding: 1rem;
-    transition: background-color 0.2s ease-in-out;
-}
-.contenedor-option .contenedor-lista-crear a:hover{
-    background-color: #3b3b3b;
-}
-.selected{
     border-bottom: 3px solid #6841db;
-    background-color: #3b3b3b !important;
 }
 
 .contenedor-option .contenedor-lista, .contenedor-añadir, .contenedor-editar{
@@ -183,9 +185,9 @@ main {
     background-color: #ffa500;
 }
 
-/*Craer nuevo registro*/
+/*Craer nuevo registro y editar*/
 .contenedor-option .contenedor-añadir, .contenedor-editar{
-    display: none !important;
+    display: flex ;
     flex-direction: column;
     align-items: center;
     background-color: #e6dfff;
@@ -193,7 +195,7 @@ main {
     border-radius: 1rem;
 }
 
-input, .contenedor-añadir p, .contenedor-editar p{
+input{
     font-family: inherit;
     font-size: 1.8rem;
 }
@@ -203,7 +205,7 @@ input, .contenedor-añadir p, .contenedor-editar p{
     flex-direction: column;
     width: 50%;
     gap: 2rem;
-    padding: 1rem 0 2rem 0;
+    padding: 3rem 0;
 }
 form .input-nombre{
     border: 0;
@@ -243,3 +245,4 @@ input[type="submit"]{
 form .imagen-actual{
     width: 15rem;
 }
+

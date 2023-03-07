@@ -7,18 +7,38 @@ function init(){
     const contenedorAñadir = document.querySelector("#contenedor-añadir");
 
 
-    contenedorBotones.addEventListener("click",function (e){
-        e.preventDefault();
-        toggleSelected(e);
+    /** sliderdown Menu */
+    const btnUsuarios  = document.querySelector("#btn-usuarios");
+    const btnProductos = document.querySelector("#btn-productos");
+    const btnCategorias  = document.querySelector("#btn-categorias");
 
-        if(e.target.classList.contains("btn-lista")){
-            contenedorLista.style = "display: block;";
-            contenedorAñadir.style = "display: none;";
-        }else{
-            contenedorLista.style = "display: none;";
-            contenedorAñadir.style = "display: flex !important;";
-        }
+    btnUsuarios.addEventListener("click", function(e){
+        e.preventDefault();
+        showList("usuarios")
     })
+    btnProductos.addEventListener("click", function(e){
+        e.preventDefault();
+        showList("productos")
+    })
+    btnCategorias.addEventListener("click", function(e){
+        e.preventDefault();
+        showList("categorias")
+    })
+
+    function showList(idLista){
+        document.querySelector(`#sub-${idLista}`).classList.toggle("show");
+        console.log("Hola");
+
+    }
+
+
+
+
+
+
+
+    /** sliderdown Menu */
+
 
     /** Validamos que el archivo de imagen no sea muy pesado  */
     const inputFile = document.querySelector("#input-file");
@@ -37,15 +57,6 @@ function init(){
 	    }
 
     });
-
-
-
-    
-    function toggleSelected(e){
-        let hermanos = getSiblings(e.target);
-        hermanos.forEach(i => i.classList.remove("selected"))
-        e.target.classList.add("selected");
-    }
 
     function getSiblings(e) {
         let siblings = []; 

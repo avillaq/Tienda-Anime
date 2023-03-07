@@ -3,7 +3,7 @@ require "inc/templates/header.php";
 ?>
     <div class="container">
         <div class="contenedor-option">
-
+            <h2>Editar categoria</h2>
             <div class="contenedor-editar" id="contenedor-editar">
                 <?php
                 $id_registro = $_GET["id"];
@@ -22,7 +22,6 @@ require "inc/templates/header.php";
                 }
 
                 ?>
-                <p>Edita categorias</p>
                 <form id="formulario-archivos" enctype="multipart/form-data">
                     <label for="input-nombre">Nombre: </label>
                     <input type="text" name="nombre_categoria" id="input-nombre" class="input-nombre" placeholder="Nombre de la categoria" value="<?php echo $categoria["nombre_categoria"]?>">
