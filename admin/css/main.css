@@ -238,3 +238,6 @@ input[type="submit"]{
 .contenedor-option  .contenedor-editar{
     display: flex;
 }
+form .imagen-actual{
+    width: 15rem;
+}

@@ -14,6 +14,7 @@ function init() {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 let respuesta = data.respuesta;
                 if (respuesta === "exito") {
                     Swal.fire({
