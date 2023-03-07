@@ -50,7 +50,7 @@ require "inc/templates/header.php";
 
             <div class="contenedor-añadir" id="contenedor-añadir">
                 <p>Crea una nueva categoria</p>
-                <form id="formulario">
+                <form id="formulario-archivos" enctype="multipart/form-data">
 
                     <label for="nombre_categoria">Nombre: </label>
                     <input type="text" name="nombre_categoria" id="nombre_categoria" class="input-nombre" placeholder="Nombre de la categoria">
@@ -60,6 +60,8 @@ require "inc/templates/header.php";
                         <input type="file" name="imagen_categoria" id="imagen_categoria" class="input-file">
                     </div>
                     <input type="hidden" name="tipoAccion" value="añadir">
+                    <input type="hidden" name="tipoOpcion" value="categorias">
+
                     <div class="container-input-submit">
                         <input type="submit" value="Añadir">
                     </div>

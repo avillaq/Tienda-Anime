@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded',init);
 function init(){
-    const formulario = document.querySelector("#formulario");
-    formulario.addEventListener('submit',function(e){
+    const formularioArchivos = document.querySelector("#formulario-archivos");
+    formularioArchivos.addEventListener('submit',function(e){
         e.preventDefault();
-        let datos = new FormData(formulario);
-        
-        fetch("inc/modelos/modelo-categorias.php",{
+        let datos = new FormData(formularioArchivos);
+
+        fetch(`inc/modelos/modelo-${datos.get("tipoOpcion")}.php`,{
             method: 'POST',
+            //mode:"cors", //Opcional
+            cache: "no-cache",  //Opcional
             body:datos
-        }).then(response => response.json()).then(data => {
+        })
+        .then(response => response.json())
+        .then(data => {
             console.log(data);
         })    
     })
