@@ -155,7 +155,9 @@ main {
     border-spacing: 0;
 }
 .contenedor-lista table img{
-    width: 13rem;
+    width: 18rem;
+    object-fit: cover;
+    height: 18rem;
 }
 .contenedor-lista table th,td{
     padding: 0.5rem 0;
@@ -183,7 +185,7 @@ main {
 
 /*Craer nuevo registro*/
 .contenedor-option .contenedor-añadir, .contenedor-editar{
-    display: none;
+    display: none !important;
     flex-direction: column;
     align-items: center;
     background-color: #e6dfff;

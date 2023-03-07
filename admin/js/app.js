@@ -16,7 +16,7 @@ function init(){
             contenedorAñadir.style = "display: none;";
         }else{
             contenedorLista.style = "display: none;";
-            contenedorAñadir.style = "display: flex;";
+            contenedorAñadir.style = "display: flex !important;";
         }
     })
 
