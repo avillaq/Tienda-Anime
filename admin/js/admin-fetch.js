@@ -18,16 +18,16 @@ function init() {
                 if (respuesta === "exito") {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Se guardo correctamente',
+                        title: 'Creado correctamente',
                         showConfirmButton: false,
                         heightAuto: false,
-                        timer: 1500
+                        timer: 1200
                     }).then(() => window.location.href = `${datos.get("tipoOpcion")}.php`);
 
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Hubo un error!!',
+                        title: 'Hubo un error!',
                         showConfirmButton: false,
                         heightAuto: false,
                         timer: 1500
@@ -53,7 +53,7 @@ function init() {
                 cancelButtonText: "Cancelar"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    
+
                     let datos = new FormData();
                     datos.append("id_registro", btn.getAttribute("id_registro"));
                     datos.append("tipoAccion", "borrar");
@@ -72,10 +72,9 @@ function init() {
                                     title: 'Eliminado',
                                     showConfirmButton: false,
                                     heightAuto: false,
-                                    timer: 1500
+                                    timer: 1000
                                 })
-
-                                $('[data-id="' + data["id_eliminado"] + '"]').parents("tr").remove();
+                                btn.parentElement.parentElement.remove();
 
                             } else {
                                 Swal.fire({
