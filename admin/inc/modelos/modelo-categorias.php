@@ -17,11 +17,6 @@ if($_POST['tipoAccion'] === "añadir"){
 
     if(move_uploaded_file($_FILES["imagen_categoria"]["tmp_name"], $directorio.$_FILES["imagen_categoria"]["name"])){
         $imagen_url = $_FILES["imagen_categoria"]["name"];
-        $imagen_resultado = "Se subio correctamente";
-
-        $respuesta = array(
-            "respuesta" => "Se subio correctamente"
-        );
     }
     else{
         $respuesta = array(
@@ -29,17 +24,15 @@ if($_POST['tipoAccion'] === "añadir"){
         );
     }
 
-    /* try {
-
-        $stmt = $conn->prepare("INSERT INTO categorias  (nombre_categoria, url_imagen) VALUES(?,?)"); 
+    try {
+        $stmt = $conn->prepare("INSERT INTO categorias (nombre_categoria, url_img) VALUES(?,?)"); 
         $stmt->bind_param("ss",$nombre,$imagen_url);
         $stmt->execute();
 
         if($stmt->affected_rows>0){
             $respuesta = array(
                 "respuesta" => "exito",
-                "id_insertado" => $stmt->insert_id,
-                "resultado_imagen" => $imagen_resultado
+                //"id_insertado" => $stmt->insert_id,
             );
         }
         else{
@@ -47,7 +40,6 @@ if($_POST['tipoAccion'] === "añadir"){
                 "respuesta" => "error"
             );
         }
-        
         $stmt->close();
         $conn->close();
 
@@ -55,11 +47,9 @@ if($_POST['tipoAccion'] === "añadir"){
         $respuesta = array(
             "respuesta" => $e->getMessage()
         );
-
-    } */
+    }
 
     echo json_encode($respuesta);
-
 }
     
 else if($_POST['tipoAccion'] === "editar"){

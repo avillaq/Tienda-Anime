@@ -13,7 +13,23 @@ function init(){
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            let respuesta = data.respuesta;
+            if(respuesta === "exito"){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Se guardo correctamente',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Hubo un error!!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+
+            }
         })    
     })
 
