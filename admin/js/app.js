@@ -1,12 +1,6 @@
 document.addEventListener('DOMContentLoaded',init);
 function init(){
 
-    const contenedorBotones = document.querySelector("#contenedor-lista-crear");
-
-    const contenedorLista = document.querySelector("#contenedor-lista");
-    const contenedorAñadir = document.querySelector("#contenedor-añadir");
-
-
     /** sliderdown Menu */
     const btnUsuarios  = document.querySelector("#btn-usuarios");
     const btnProductos = document.querySelector("#btn-productos");
@@ -27,17 +21,9 @@ function init(){
 
     function showList(idLista){
         document.querySelector(`#sub-${idLista}`).classList.toggle("show");
-        console.log("Hola");
-
     }
 
 
-
-
-
-
-
-    /** sliderdown Menu */
 
 
     /** Validamos que el archivo de imagen no sea muy pesado  */

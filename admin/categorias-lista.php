@@ -30,7 +30,7 @@ require "inc/templates/header.php";
                             <td><img src="../img/categorias/<?php echo $categoria["url_img"]?>" alt=""></td>
                             <td>
                                 <a class="btn-editar" href="categorias-editar.php?id=<?php echo $categoria["id_categoria"]?>"><i class="fa-solid fa-pen"></i></a>
-                                <a href="#" class="btn-borrar" id="btn-borrar" id_registro="<?php echo $categoria["id_categoria"]?>" tipoOpcion="<?php echo basename($_SERVER["PHP_SELF"], ".php");?>" ><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="#" class="btn-borrar" id_registro="<?php echo $categoria["id_categoria"]?>" tipoOpcion="categorias" ><i class="fa-solid fa-trash-can"></i></a>
 
                             </td>
                         </tr>

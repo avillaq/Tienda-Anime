@@ -32,7 +32,7 @@ if($_POST['tipoAccion'] === "añadir"){
         if($stmt->affected_rows>0){
             $respuesta = array(
                 "respuesta" => "exito",
-                //"id_insertado" => $stmt->insert_id,
+                "accion" => "crear"
             );
         }
         else{
@@ -91,6 +91,7 @@ else if($_POST['tipoAccion'] === "editar"){
         if($stmt->affected_rows>0){
             $respuesta = array(
                 "respuesta" => "exito",
+                "accion" => "editar"
             );
         }
         else{
