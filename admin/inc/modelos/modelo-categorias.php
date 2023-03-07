@@ -56,6 +56,36 @@ else if($_POST['tipoAccion'] === "editar"){
 }
 
 else if($_POST['tipoAccion'] === "borrar"){
+    $id_registro = $_POST['id_registro'];
+    try {
+        $stmt = $conn->prepare("DELETE FROM categorias WHERE id_categoria=?");
+        $stmt->bind_param("i",$id_registro);
+        $stmt->execute();
+
+        if($stmt->affected_rows>0){
+            $respuesta = array(
+                "respuesta" => "exito"
+            );
+        }
+        else{
+            $respuesta = array(
+                "respuesta" => "error"
+            );
+        }
+        
+        $stmt->close();
+        $conn->close();
+
+        
+    } catch (Exception $e) {
+        $respuesta = array(
+            "respuesta" => $e->getMessage()
+        );
+
+    }
+
+    echo json_encode($respuesta);
+    
 }
 
 ?>

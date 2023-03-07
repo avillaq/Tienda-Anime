@@ -7,8 +7,8 @@ require "inc/templates/header.php";
             <div class="contenedor-editar" id="contenedor-editar">
                 <p>Edita categorias</p>
                 <form id="formulario-archivos" enctype="multipart/form-data">
-                    <label for="nombre_categoria">Nombre: </label>
-                    <input type="text" name="nombre_categoria" id="nombre_categoria" class="input-nombre" placeholder="Nombre de la categoria">
+                    <label for="input-nombre">Nombre: </label>
+                    <input type="text" name="nombre_categoria" id="input-nombre" class="input-nombre" placeholder="Nombre de la categoria">
                     
                     <label for="input-file">Imagen: </label>
                     <div class="container-input-file">
