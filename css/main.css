@@ -311,6 +311,10 @@ h3{
     font-weight: 600;
     transition: all 0.2s ease-in-out;
 }
+.card-categoria img{
+    object-fit: cover;
+    height: 18rem;
+}
 .card-categoria a:hover{
     background-color: #ffe4eb;
     color: #c36;
