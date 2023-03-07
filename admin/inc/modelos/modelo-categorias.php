@@ -4,17 +4,16 @@ require "../funciones/conexionbd.php";
 if($_POST['tipoAccion'] === "añadir"){
     $nombre = $_POST['nombre_categoria'];
 
-    /*$respuesta = array(
+    /* $respuesta = array(
         "post" => $_POST,
-        "file" => $_FILES //Para archivos
+        "file" => $_FILES["imagen_categoria"]["error"] //Para archivos
     );
-    die(json_encode($respuesta));*/
+    die(json_encode($respuesta)); */
     
-    $directorio = "../../img/categorias/";
+    $directorio = "../../../img/categorias/";
     if(!is_dir($directorio)){
         mkdir($directorio, 0755,true);//Crea una carpeta
     }
-
 
     if(move_uploaded_file($_FILES["imagen_categoria"]["tmp_name"], $directorio.$_FILES["imagen_categoria"]["name"])){
         $imagen_url = $_FILES["imagen_categoria"]["name"];
