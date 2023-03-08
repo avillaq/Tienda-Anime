@@ -33,28 +33,31 @@
             <div id="nav-menu">
                 <?php
                 $path = $_SERVER["PHP_SELF"];
-                $archivo = basename($path, ".php");/* Falta : <?php echo (strpos($archivo, "usuarios"))? "active" : "";?>*/ 
+                $archivo = basename($path, ".php");
 
+                $isUsuarios = str_contains($archivo, "usuarios");
+                $isProductos = str_contains($archivo, "productos");
+                $isCategorias = str_contains($archivo, "categorias");
 
 
                 ?>
 
-                <a class="btn-index" href="index.php">Dashboard</a>
+                <a class="<?php echo str_contains($archivo, "index")? "active" : "";?>" href="index.php">Dashboard</a>
 
-                <a id="btn-usuarios" class="<?php echo strpos($archivo, "usuarios")? "active" : "";?>" href="#">Usuarios <i class="fa-solid fa-caret-left" id="usuariosArrow"></i></a>
-                <ul id="sub-usuarios">
+                <a id="btn-usuarios" class="<?php echo ($isUsuarios)? "active" : "";?>" href="#">Usuarios <i class="fa-solid fa-caret-left <?php echo ($isUsuarios)? "rotate" : "";?>" id="usuariosArrow"></i></a>
+                <ul id="sub-usuarios" class="<?php echo ($isUsuarios)? "show" : "";?>">
                     <li><a href="usuarios-lista.php">Lista de usuarios</a></li>
                     <li><a href="usuarios-crear.php">Crear usuarios</a></li>
                 </ul>
 
-                <a id="btn-productos" class="<?php echo (strpos($archivo, "productos"))? "active" : "";?>" href="#">Productos <i class="fa-solid fa-caret-left" id="productosArrow"></i></a>
-                <ul id="sub-productos">
+                <a id="btn-productos" class="<?php echo ($isProductos)? "active" : "";?>" href="#">Productos <i class="fa-solid fa-caret-left <?php echo ($isProductos)? "rotate" : "";?>" id="productosArrow"></i></a>
+                <ul id="sub-productos" class="<?php echo ($isProductos)? "show" : "";?>">
                     <li><a href="productos-lista.php">Lista de productos</a></li>
                     <li><a href="productos-crear.php">Crear productos</a></li>
                 </ul>
 
-                <a id="btn-categorias" class="<?php echo (strpos($archivo, "categorias"))? "active" : "";?>" href="#">Categorias <i class="fa-solid fa-caret-left" id="categoriasArrow"></i></a>
-                <ul id="sub-categorias">
+                <a id="btn-categorias" class="<?php echo ($isCategorias)? "active" : "";?>" href="#">Categorias <i class="fa-solid fa-caret-left <?php echo ($isCategorias)? "rotate" : "";?>" id="categoriasArrow"></i></a>
+                <ul id="sub-categorias" class="<?php echo ($isCategorias)? "show" : "";?>">
                     <li><a href="categorias-lista.php">Lista de categorias</a></li>
                     <li><a href="categorias-crear.php">Crear categorias</a></li>
                 </ul>
