@@ -10,8 +10,8 @@ if($_POST['tipoAccion'] === "añadir"){
     );
     die(json_encode($respuesta)); */
     
-    $directorio = "../../../img/categorias/";
-    if(!is_dir($directorio)){
+    $directorio = "../../../img/categorias/"; /////////////////////////////////// Solucionar : debe ser posible no ser necesario la igen para las categorias al momento de crear una nueva
+        if(!is_dir($directorio)){
         mkdir($directorio, 0755,true);//Crea una carpeta
     }
 

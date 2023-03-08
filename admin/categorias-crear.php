@@ -10,11 +10,11 @@ require "inc/templates/header.php";
                 <form id="formulario-archivos" enctype="multipart/form-data">
                     
                     <label for="input-nombre">Nombre: </label>
-                    <input type="text" name="nombre_categoria" id="input-nombre" class="input-nombre" placeholder="Nombre de la categoria">
+                    <input type="text" name="nombre_categoria" id="input-nombre" class="input-nombre" placeholder="Nombre de la categoria" required>
                     
                     <label for="input-file">Imagen: </label>
                     <div class="container-input-file">
-                        <input type="file" name="imagen_categoria" id="input-file" class="input-file" accept="image/png, image/gif, image/jpg, image/jpeg, image/webp">
+                        <input type="file" name="imagen_categoria" id="input-file" class="input-file" accept="image/png, image/gif, image/jpg, image/jpeg, image/webp" required>
                     </div>
                  
                     <input type="hidden" name="tipoAccion" value="añadir">

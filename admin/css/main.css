@@ -147,7 +147,7 @@ main {
     justify-content: center;
 }
 .contenedor-option{
-    width: 70%;
+    width: 75%;
     margin-top: 2rem;
 }
 .contenedor-option h2{
@@ -216,7 +216,7 @@ input{
     gap: 2rem;
     padding: 3rem 0;
 }
-form .input-nombre{
+form .input-nombre, .input-precio{
     border: 0;
     outline: none;
     border-bottom: 1px solid #353030;
