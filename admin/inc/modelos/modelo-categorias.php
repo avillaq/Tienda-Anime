@@ -10,23 +10,33 @@ if($_POST['tipoAccion'] === "añadir"){
     );
     die(json_encode($respuesta)); */
     
-    $directorio = "../../../img/categorias/"; /////////////////////////////////// Solucionar : debe ser posible no ser necesario la igen para las categorias al momento de crear una nueva
-        if(!is_dir($directorio)){
-        mkdir($directorio, 0755,true);//Crea una carpeta
-    }
-
-    if(move_uploaded_file($_FILES["imagen_categoria"]["tmp_name"], $directorio.$_FILES["imagen_categoria"]["name"])){
-        $imagen_url = $_FILES["imagen_categoria"]["name"];
-    }
-    else{
-        $respuesta = array(
-            "respuesta" => error_get_last()
-        );
-    }
+   
 
     try {
-        $stmt = $conn->prepare("INSERT INTO categorias (nombre_categoria, url_img) VALUES(?,?)"); 
-        $stmt->bind_param("ss",$nombre,$imagen_url);
+        if($_FILES["imagen_categoria"]["error"] === 4){//error 4 : no se subio ningun archivo
+
+            $stmt = $conn->prepare("INSERT INTO categorias (nombre_categoria) VALUES(?)"); 
+            $stmt->bind_param("s",$nombre);
+
+        }else{
+
+            $directorio = "../../../img/categorias/"; /////////////////////////////////// Solucionar : debe ser posible no ser necesario la igen para las categorias al momento de crear una nueva
+            if(!is_dir($directorio)){
+                mkdir($directorio, 0755,true);//Crea una carpeta
+            }
+    
+            if(move_uploaded_file($_FILES["imagen_categoria"]["tmp_name"], $directorio.$_FILES["imagen_categoria"]["name"])){
+                $imagen_url = $_FILES["imagen_categoria"]["name"];
+            }
+            else{
+                $respuesta = array(
+                    "respuesta" => error_get_last()
+                );
+            }
+            $stmt = $conn->prepare("INSERT INTO categorias (nombre_categoria, url_img) VALUES(?,?)"); 
+            $stmt->bind_param("ss",$nombre,$imagen_url);
+        }
+        
         $stmt->execute();
 
         if($stmt->affected_rows>0){

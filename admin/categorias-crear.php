@@ -14,7 +14,7 @@ require "inc/templates/header.php";
                     
                     <label for="input-file">Imagen: </label>
                     <div class="container-input-file">
-                        <input type="file" name="imagen_categoria" id="input-file" class="input-file" accept="image/png, image/gif, image/jpg, image/jpeg, image/webp" required>
+                        <input type="file" name="imagen_categoria" id="input-file" class="input-file" accept="image/png, image/gif, image/jpg, image/jpeg, image/webp">
                     </div>
                  
                     <input type="hidden" name="tipoAccion" value="añadir">
