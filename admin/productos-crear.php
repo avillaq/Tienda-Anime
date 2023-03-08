@@ -27,7 +27,7 @@ require "inc/templates/header.php";
                     ?>
                     <label for="select-categoria">Categoria: </label>
                     <select name="categoria_producto" id="select-categoria" form="formulario-archivos" required>
-                        <option value="0" selected disabled>-- Selecciona una categoria --</option>
+                        <option value="0" selected disabled>---- Selecciona una categoria ----</option>
                         <?php while($categoria=$respuesta->fetch_assoc()){?>
                             <option value="<?php echo $categoria["id_categoria"]?>"><?php echo $categoria["nombre_categoria"]?></option>
                         <?php }

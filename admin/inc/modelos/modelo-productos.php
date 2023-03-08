@@ -2,39 +2,43 @@
 require "../funciones/conexionbd.php";
 
 if($_POST['tipoAccion'] === "añadir"){
-    $nombre = $_POST['nombre_categoria'];
-
-    /* $respuesta = array(
-        "post" => $_POST,
-        "file" => $_FILES["imagen_categoria"]["error"] //Para archivos
-    );
-    die(json_encode($respuesta)); */
+    $nombre = $_POST['nombre_producto'];
+    $precio = $_POST['precio_producto'];
     
-   
 
+    if(!isset($_POST['categoria_producto'])){ /**Devolvera error si no se eligio ninguna categoria */
+        $respuesta = array(
+            "respuesta" => "error"
+        );
+        die(json_encode($respuesta));
+    }
+
+    $categoria = $_POST['categoria_producto'];
+
+    
     try {
-        if($_FILES["imagen_categoria"]["error"] === 4){//error 4 : no se subio ningun archivo
+        if($_FILES["imagen_producto"]["error"] === 4){//error 4 : no se subio ningun archivo (imagen producto)
 
-            $stmt = $conn->prepare("INSERT INTO categorias (nombre_categoria) VALUES(?)"); 
-            $stmt->bind_param("s",$nombre);
+            $stmt = $conn->prepare("INSERT INTO productos (nombre_producto, precio_producto,categoria_id) VALUES(?,?,?)"); 
+            $stmt->bind_param("sdi",$nombre,$precio,$categoria);
 
         }else{
 
-            $directorio = "../../../img/categorias/";
+            $directorio = "../../../img/productos/";
             if(!is_dir($directorio)){
                 mkdir($directorio, 0755,true);//Crea una carpeta
             }
     
-            if(move_uploaded_file($_FILES["imagen_categoria"]["tmp_name"], $directorio.$_FILES["imagen_categoria"]["name"])){
-                $imagen_url = $_FILES["imagen_categoria"]["name"];
+            if(move_uploaded_file($_FILES["imagen_producto"]["tmp_name"], $directorio.$_FILES["imagen_producto"]["name"])){
+                $imagen_url = $_FILES["imagen_producto"]["name"];
             }
             else{
                 $respuesta = array(
                     "respuesta" => error_get_last()
                 );
             }
-            $stmt = $conn->prepare("INSERT INTO categorias (nombre_categoria, url_img) VALUES(?,?)"); 
-            $stmt->bind_param("ss",$nombre,$imagen_url);
+            $stmt = $conn->prepare("INSERT INTO productos (nombre_producto, precio_producto,url_img,categoria_id) VALUES(?,?,?,?)"); 
+            $stmt->bind_param("sdsi",$nombre,$precio,$imagen_url,$categoria);
         }
         
         $stmt->execute();

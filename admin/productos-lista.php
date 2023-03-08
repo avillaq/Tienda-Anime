@@ -28,7 +28,7 @@ require "inc/templates/header.php";
                     ?>
                     <?php while($producto=$respuesta->fetch_assoc()){?>
                         <tr>
-                            <td><?php echo $producto["nombre_producto"]?></td>
+                            <td><?php echo $producto["nombre_producto"]?></td><!--  style="word-break:break-all;  - esto en nombre de producto"-->        
                             <td><?php echo $producto["precio_producto"]?></td>
                             <td><?php echo $producto["nombre_categoria"]?></td>
 
