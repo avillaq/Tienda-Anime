@@ -21,9 +21,9 @@ function init(){
 
     function showList(idLista){
         document.querySelector(`#sub-${idLista}`).classList.toggle("show");
+        document.querySelector(`#${idLista}Arrow`).classList.toggle("rotate");
+
     }
-
-
 
 
     /** Validamos que el archivo de imagen no sea muy pesado  */

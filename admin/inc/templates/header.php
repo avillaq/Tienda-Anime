@@ -33,24 +33,27 @@
             <div id="nav-menu">
                 <?php
                 $path = $_SERVER["PHP_SELF"];
-                $file_name = basename($path, ".php"); /* Falta : <?php echo ($file_name === "index")? "active" : "";?>*/ 
+                $archivo = basename($path, ".php");/* Falta : <?php echo (strpos($archivo, "usuarios"))? "active" : "";?>*/ 
+
+
+
                 ?>
 
                 <a class="btn-index" href="index.php">Dashboard</a>
 
-                <a id="btn-usuarios" href="#">Usuarios</a>
+                <a id="btn-usuarios" class="<?php echo strpos($archivo, "usuarios")? "active" : "";?>" href="#">Usuarios <i class="fa-solid fa-caret-left" id="usuariosArrow"></i></a>
                 <ul id="sub-usuarios">
                     <li><a href="usuarios-lista.php">Lista de usuarios</a></li>
                     <li><a href="usuarios-crear.php">Crear usuarios</a></li>
                 </ul>
 
-                <a id="btn-productos" href="#">Productos</a>
+                <a id="btn-productos" class="<?php echo (strpos($archivo, "productos"))? "active" : "";?>" href="#">Productos <i class="fa-solid fa-caret-left" id="productosArrow"></i></a>
                 <ul id="sub-productos">
                     <li><a href="productos-lista.php">Lista de productos</a></li>
                     <li><a href="productos-crear.php">Crear productos</a></li>
                 </ul>
 
-                <a id="btn-categorias" href="#">Categorias</a>
+                <a id="btn-categorias" class="<?php echo (strpos($archivo, "categorias"))? "active" : "";?>" href="#">Categorias <i class="fa-solid fa-caret-left" id="categoriasArrow"></i></a>
                 <ul id="sub-categorias">
                     <li><a href="categorias-lista.php">Lista de categorias</a></li>
                     <li><a href="categorias-crear.php">Crear categorias</a></li>

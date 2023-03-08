@@ -92,7 +92,10 @@ main {
 }
 .navegacion a{
     font-size: 1.8rem;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     margin: 0.5rem 0;
     padding: 0.8rem 3rem;
     border-radius: 0.5rem;
@@ -103,6 +106,12 @@ main {
 }
 .active{
     background-color: #6841db;
+}
+.navegacion a i{
+    transition: transform 0.4s ease;
+}
+.rotate{
+    transform: rotateZ(-90deg);
 }
 
 .navegacion ul{
