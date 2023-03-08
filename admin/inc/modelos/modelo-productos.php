@@ -68,26 +68,29 @@ if($_POST['tipoAccion'] === "añadir"){
     
 else if($_POST['tipoAccion'] === "editar"){
 
-    $nombre = $_POST['nombre_categoria'];
+    $nombre = $_POST['nombre_producto'];
+    $precio = $_POST['precio_producto'];
+    $categoria = $_POST['categoria_producto'];
+
     $id_registro = $_POST['id_registro'];
 
     try {
 
-        if($_FILES["imagen_categoria"]["error"] === 4){//error 4 : no se subio ningun archivo
+        if($_FILES["imagen_producto"]["error"] === 4){//error 4 : no se subio ningun archivo
 
             //Sin imagen (imagen no cambia)
-            $stmt = $conn->prepare("UPDATE categorias SET nombre_categoria= ?, editado=NOW() WHERE id_categoria=?");
+            $stmt = $conn->prepare("UPDATE productos SET nombre_producto= ?, precio_producto=?, categoria_id=?, editado=NOW() WHERE id_producto=?");
 
-            $stmt->bind_param("si",$nombre,$id_registro);
+            $stmt->bind_param("sdii",$nombre,$precio,$categoria,$id_registro);
 
         }else{
-            $directorio = "../../../img/categorias/";
+            $directorio = "../../../img/productos/";
             if(!is_dir($directorio)){
                 mkdir($directorio, 0755,true);//Crea una carpeta
             }
 
-            if(move_uploaded_file($_FILES["imagen_categoria"]["tmp_name"], $directorio.$_FILES["imagen_categoria"]["name"])){
-                $imagen_url = $_FILES["imagen_categoria"]["name"];
+            if(move_uploaded_file($_FILES["imagen_producto"]["tmp_name"], $directorio.$_FILES["imagen_producto"]["name"])){
+                $imagen_url = $_FILES["imagen_producto"]["name"];
             }
             else{
                 $respuesta = array(
@@ -96,9 +99,9 @@ else if($_POST['tipoAccion'] === "editar"){
             }
 
             //Con imagen (imagen cambia)
-            $stmt = $conn->prepare("UPDATE categorias SET nombre_categoria= ?, url_img=?, editado=NOW() WHERE id_categoria=?");
+            $stmt = $conn->prepare("UPDATE productos SET nombre_producto= ?, precio_producto=?,url_img=?, categoria_id=?, editado=NOW() WHERE id_producto=?");
 
-            $stmt->bind_param("ssi",$nombre,$imagen_url, $id_registro);
+            $stmt->bind_param("sdsii",$nombre,$precio,$imagen_url,$categoria,$id_registro);
         }
         $stmt->execute();
 
