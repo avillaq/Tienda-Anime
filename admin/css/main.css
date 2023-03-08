@@ -204,7 +204,7 @@ main {
     border-radius: 1rem;
 }
 
-input{
+input, select{
     font-family: inherit;
     font-size: 1.8rem;
 }
@@ -216,7 +216,7 @@ input{
     gap: 2rem;
     padding: 3rem 0;
 }
-form .input-nombre, .input-precio{
+form .input-nombre, .input-precio, select{
     border: 0;
     outline: none;
     border-bottom: 1px solid #353030;
