@@ -7,7 +7,7 @@ require "inc/templates/header.php";
             <h2>Crea una nueva categoria</h2>
 
             <div class="contenedor-añadir" id="contenedor-añadir">
-                <form id="formulario-archivos" enctype="multipart/form-data">
+                <form id="formulario-admin" enctype="multipart/form-data">
                     
                     <label for="input-nombre">Nombre: </label>
                     <input type="text" name="nombre_categoria" id="input-nombre" class="input-nombre" placeholder="Nombre de la categoria" required>

@@ -22,7 +22,7 @@ require "inc/templates/header.php";
                 }
 
                 ?>
-                <form id="formulario-archivos" enctype="multipart/form-data">
+                <form id="formulario-admin" enctype="multipart/form-data">
                     <label for="input-nombre">Nombre: </label>
                     <input type="text" name="nombre_producto" id="input-nombre" class="input-nombre" placeholder="Nombre del producto" value="<?php echo $producto["nombre_producto"]?>" required>
 
@@ -41,7 +41,7 @@ require "inc/templates/header.php";
                         }
                     ?>
                     <label for="select-categoria">Categoria: </label>
-                    <select name="categoria_producto" id="select-categoria" form="formulario-archivos" required>
+                    <select name="categoria_producto" id="select-categoria" form="formulario-admin" required>
                         <option value="0" disabled>-- Selecciona una categoria --</option>
                         <?php while($categoria=$respuesta->fetch_assoc()){?>
                             <?php

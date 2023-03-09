@@ -4,10 +4,10 @@ require "inc/templates/header.php";
     <div class="container">
         <div class="contenedor-option">
 
-            <h2>Crea un nuevo producto</h2>
+            <h2>Crea un nuevo usuario</h2>
 
             <div class="contenedor-añadir" id="contenedor-añadir">
-                <form id="formulario-archivos" enctype="multipart/form-data">
+                <form id="formulario-admin" enctype="multipart/form-data">
                     
                     <label for="input-nombre">Nombre: </label>
                     <input type="text" name="nombre_producto" id="input-nombre" class="input-nombre" placeholder="Nombre del producto" required>
@@ -26,7 +26,7 @@ require "inc/templates/header.php";
                         }
                     ?>
                     <label for="select-categoria">Categoria: </label>
-                    <select name="categoria_producto" id="select-categoria" form="formulario-archivos" required>
+                    <select name="categoria_producto" id="select-categoria" form="formulario-admin" required>
                         <option value="0" selected disabled>---- Selecciona una categoria ----</option>
                         <?php while($categoria=$respuesta->fetch_assoc()){?>
                             <option value="<?php echo $categoria["id_categoria"]?>"><?php echo $categoria["nombre_categoria"]?></option>

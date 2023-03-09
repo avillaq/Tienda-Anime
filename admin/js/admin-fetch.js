@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', init);
 function init() {
 
-    const formularioArchivos = document.querySelector("#formulario-archivos");
+    const formularioArchivos = document.querySelector("#formulario-admin");
     if(formularioArchivos !== null){
         formularioArchivos.addEventListener('submit', function (e) {
             e.preventDefault();

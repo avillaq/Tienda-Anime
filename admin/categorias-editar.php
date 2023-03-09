@@ -22,7 +22,7 @@ require "inc/templates/header.php";
                 }
 
                 ?>
-                <form id="formulario-archivos" enctype="multipart/form-data">
+                <form id="formulario-admin" enctype="multipart/form-data">
                     <label for="input-nombre">Nombre: </label>
                     <input type="text" name="nombre_categoria" id="input-nombre" class="input-nombre" placeholder="Nombre de la categoria" value="<?php echo $categoria["nombre_categoria"]?>" required>
             
