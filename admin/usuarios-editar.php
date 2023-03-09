@@ -25,7 +25,7 @@ require "inc/templates/header.php";
                 <form id="formulario-admin">
 
                     <label for="input-nombre">Usuario: </label>
-                    <input type="text" name="nombre_usuario" id="input-nombre" class="form-field" placeholder="Nombre del usuario" value="<?php echo $usuario["nombre_usuario"]?>" required>
+                    <input type="text" name="nombre_usuario" id="input-nombre" class="form-field" placeholder="Nombre de usuario" value="<?php echo $usuario["nombre_usuario"]?>" required>
 
                     <label for="input-correo">Correo: </label>
                     <input type="email" name="correo_usuario" id="input-correo" class="form-field" placeholder="Correo del usuario" value="<?php echo $usuario["correo_usuario"]?>" required>
