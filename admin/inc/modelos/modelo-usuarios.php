@@ -103,7 +103,7 @@ else if($_POST['tipoAccion'] === "editar"){
 else if($_POST['tipoAccion'] === "borrar"){
     $id_registro = $_POST['id_registro'];
     try {
-        $stmt = $conn->prepare("DELETE FROM categorias WHERE id_categoria=?");
+        $stmt = $conn->prepare("DELETE FROM usuarios WHERE id_usuario=?");
         $stmt->bind_param("i",$id_registro);
         $stmt->execute();
 
