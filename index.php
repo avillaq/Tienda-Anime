@@ -8,69 +8,33 @@
                 <a href="categorias.php" class="btn-verCategorias">Ver todas las categorias</a>
             </div>
             <div class="productos">
+
+            <?php
+                try {
+                    require "inc/funciones/conexionbd.php";
+                    $sql = "SELECT productos.nombre_producto, productos.precio_producto, productos.url_img, categorias.nombre_categoria FROM productos ";
+                    $sql .= "INNER JOIN categorias ON productos.categoria_id = categorias.id_categoria";
+
+                    $respuesta = $conn->query($sql);
+
+                } catch (Exception $e) {
+                    echo "Error: ".$e->getMessage();
+                }
+
+            ?>
+
+                <?php while($producto = $respuesta->fetch_assoc()){?>
                 <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
+                    <img src="img/productos/<?php echo $producto["url_img"]?>" alt="">
                     <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="detalles.php" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
+                        <p><small><?php echo $producto["nombre_categoria"]?></small></p>
+                        <a href="detalles.php" class="nombre-producto"><?php echo $producto["nombre_producto"]?></a>
+                        <p><small>$<?php echo $producto["precio_producto"]?></small></p>
                     </div>
-                
                 </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
+                <?php }
+                    $conn->close();?>
                 
-                </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
-                
-                </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
-                
-                </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
-                
-                </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
-                
-                </div>
-                <div class="card">
-                    <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
-                    <div class="descripcion">
-                        <p><small>Figuras de Anime</small></p>
-                        <a href="#" class="nombre-producto">Figuras de acción de Anime de ataque a los Titanes</a>
-                        <p><small>$ 10</small></p>
-                    </div>
-                
-                </div>
             </div>
             </div>
 
