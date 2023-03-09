@@ -155,11 +155,9 @@ main {
     background-color: #3b3b3b ;
     padding: 1rem;
     border-bottom: 3px solid #6841db;
+    margin-bottom: 1rem;
 }
 
-.contenedor-option .contenedor-lista, .contenedor-añadir, .contenedor-editar{
-    margin-top: 1rem;
-}
 .contenedor-lista table{
     width: 100%;
     text-align: center;
