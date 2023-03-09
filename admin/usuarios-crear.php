@@ -10,7 +10,7 @@ require "inc/templates/header.php";
                 <form id="formulario-admin">
                     
                     <label for="input-nombre">Usuario: </label>
-                    <input type="text" name="nombre_usuario" id="input-nombre" class="form-field" placeholder="Nombre del producto" required>
+                    <input type="text" name="nombre_usuario" id="input-nombre" class="form-field" placeholder="Nombre del usuario" required>
 
                     <label for="input-correo">Correo: </label>
                     <input type="email" name="correo_usuario" id="input-correo" class="form-field" placeholder="Correo del usuario" required>
