@@ -31,10 +31,10 @@ require "inc/templates/header.php";
                     <input type="email" name="correo_usuario" id="input-correo" class="form-field" placeholder="Correo del usuario" value="<?php echo $usuario["correo_usuario"]?>" required>
 
                     <label for="input-password">Contraseña: </label>
-                    <input type="password" name="pass_usuario" id="input-password" class="form-field" placeholder="Contraseña" required>
+                    <input type="password" name="pass_usuario" id="input-password" class="form-field" placeholder="Contraseña">
 
                     <label for="input-confirm-password">Confirma la contraseña: </label>
-                    <input type="password" id="input-confirm-password" class="form-field" placeholder="Confirma la contraseña" required>
+                    <input type="password" id="input-confirm-password" class="form-field" placeholder="Confirma la contraseña">
 
 
                     <input type="hidden" name="tipoAccion" value="editar">
