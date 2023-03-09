@@ -24,10 +24,10 @@ require "inc/templates/header.php";
                 ?>
                 <form id="formulario-admin" enctype="multipart/form-data">
                     <label for="input-nombre">Nombre: </label>
-                    <input type="text" name="nombre_producto" id="input-nombre" class="input-nombre" placeholder="Nombre del producto" value="<?php echo $producto["nombre_producto"]?>" required>
+                    <input type="text" name="nombre_producto" id="input-nombre" class="form-field" placeholder="Nombre del producto" value="<?php echo $producto["nombre_producto"]?>" required>
 
                     <label for="input-precio">Precio: </label>
-                    <input type="number" name="precio_producto" id="input-precio" class="input-precio" placeholder="1.0" step="0.01" min="0" value="<?php echo $producto["precio_producto"]?>" required>
+                    <input type="number" name="precio_producto" id="input-precio" class="form-field" placeholder="1.0" step="0.01" min="0" value="<?php echo $producto["precio_producto"]?>" required>
 
 
                     <?php
@@ -41,7 +41,7 @@ require "inc/templates/header.php";
                         }
                     ?>
                     <label for="select-categoria">Categoria: </label>
-                    <select name="categoria_producto" id="select-categoria" form="formulario-admin" required>
+                    <select class="form-field" name="categoria_producto" id="select-categoria" form="formulario-admin" required>
                         <option value="0" disabled>-- Selecciona una categoria --</option>
                         <?php while($categoria=$respuesta->fetch_assoc()){?>
                             <?php

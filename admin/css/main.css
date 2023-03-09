@@ -216,7 +216,7 @@ input, select{
     gap: 2rem;
     padding: 3rem 0;
 }
-form .input-nombre, .input-precio, select{
+form .form-field{
     border: 0;
     outline: none;
     border-bottom: 1px solid #353030;
