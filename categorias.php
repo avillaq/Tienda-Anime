@@ -19,7 +19,7 @@
             <?php while($categoria=$respuesta->fetch_assoc()) { ?>
                 <div class="card-categoria">
                     <img src="img/categorias/<?php echo $categoria["url_img"]?>" alt="">
-                    <a href="categoria-producto.php?id=<?php echo $categoria["id_categoria"]?>"><?php echo $categoria["nombre_categoria"]?></a>
+                    <a href="categoria-producto.php?id_categoria=<?php echo $categoria["id_categoria"]?>"><?php echo $categoria["nombre_categoria"]?></a>
                 </div>
             <?php }
                 $conn->close();

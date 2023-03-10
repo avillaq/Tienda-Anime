@@ -6,7 +6,7 @@
                 try {
                     require "inc/funciones/conexionbd.php";
 
-                    $id_categoria = $_GET["id"];
+                    $id_categoria = $_GET["id_categoria"];
 
                     /*Consulta para los productos*/
                     $sql = "SELECT * FROM productos WHERE categoria_id = $id_categoria ";
@@ -44,7 +44,7 @@
                         <img src="img/productos/<?php echo $producto["url_img"]?>" alt="">
                         <div class="descripcion">
                             <p><small><?php echo $nombre_categoria["nombre_categoria"]?></small></p>
-                            <a href="detalles.php" class="nombre-producto"><?php echo $producto["nombre_producto"]?></a>
+                            <a href="detalles.php?id_producto=<?php echo $producto["id_producto"]?>" class="nombre-producto"><?php echo $producto["nombre_producto"]?></a>
                             <p><small>$<?php echo $producto["precio_producto"]?></small></p>
                         </div>
                     </div>
