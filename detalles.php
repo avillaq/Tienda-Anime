@@ -3,12 +3,32 @@
 ?>
     <div class="container-detalles">
         <div class="detalles">
-            <img src="img/productos/Figuras-de-acci-n-de-Anime-de-ataque-a-los-Titanes-Levi-Ackerman-Mikasa-Ackerman-Eren.jpg_350x350.jpg" alt="">
+
+        <?php
+                try {
+                    require "inc/funciones/conexionbd.php";
+
+                    $id_producto = $_GET["id_producto"];
+
+                    /*Consulta para los productos*/
+                    $sql = "SELECT nombre_producto, precio_producto, url_img FROM productos WHERE id_producto = $id_producto";
+                    $respuesta = $conn->query($sql);
+
+                    $producto = $respuesta->fetch_assoc();
+
+                } catch (Exception $e) {
+                    echo "Error: ".$e->getMessage();
+                }
+
+            ?>
+
+
+            <img src="img/productos/<?php echo $producto["url_img"]?>" alt="">
 
             <div class="detalles-producto">
-                <p>Shingeki No Kyojin cosplay collar llavero</p>
+                <p><?php echo $producto["nombre_producto"]?></p>
                 <small>Envio Gratis</small>
-                <p>$10</p>
+                <p>$<?php echo $producto["precio_producto"]?></p>
                 <div class="container-cantidad">
                     <input type="number" name="cantidad" id="cantidad" min=1 value=1>
                     <a href="#">Añadir al carrito</a>

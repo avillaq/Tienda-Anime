@@ -230,6 +230,7 @@ h3{
     background-color: #101010;
     border-radius: 2rem;
     padding: 2rem 3rem;
+    max-width: 48rem;
 }
 .detalles-producto small{
     color: #77a464;
@@ -268,7 +269,7 @@ h3{
 
 /*info detalles*/
 .info-detalles{
-    margin: 4rem 0;
+    margin-top: 6rem;
 }
 .info-detalles p{
     font-size: 1.4rem;
