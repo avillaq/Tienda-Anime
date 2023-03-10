@@ -29,10 +29,13 @@
                 <p><?php echo $producto["nombre_producto"]?></p>
                 <small>Envio Gratis</small>
                 <p>$<?php echo $producto["precio_producto"]?></p>
-                <div class="container-cantidad">
-                    <input type="number" name="cantidad" id="cantidad" min=1 value=1>
-                    <a href="#">Añadir al carrito</a>
-                </div>
+ 
+                <form id="formulario-carrito" class="formulario-carrito">
+                    <input type="number" name="cantidad" min=1 value=1>
+
+                    <input type="submit" class="btn-submit" value="Añadir al carrito">
+                </form>
+                    
                 <div class="info-detalles">
                     <div class="garantia">
                         <span class="span-icon"><i class="fa-solid fa-shield-halved"></i></span>

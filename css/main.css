@@ -231,6 +231,8 @@ h3{
     border-radius: 2rem;
     padding: 2rem 3rem;
     max-width: 48rem;
+    min-width: 47rem;
+
 }
 .detalles-producto small{
     color: #77a464;
@@ -240,12 +242,12 @@ h3{
     font-size: 2.5rem;
     font-weight: 600;
 }
-.detalles-producto .container-cantidad{
+.detalles-producto .formulario-carrito{
     display: flex;
     gap: 1rem;
 }
 
-.detalles-producto .container-cantidad input[type="number"]{
+.detalles-producto .formulario-carrito input[type="number"]{
     outline: none;
     border-radius: 0.5rem;
     width: 5rem;
@@ -254,16 +256,16 @@ h3{
     font-size: 1.6rem;
     display: block;
 }
-.detalles-producto .container-cantidad a{
+.detalles-producto .formulario-carrito .btn-submit{
     border-radius: 0.5rem;
     background-color: #35bb47;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
-.detalles-producto .container-cantidad a:hover{
+.detalles-producto .formulario-carrito .btn-submit:hover{
     background-color: #178225;
 }
 
