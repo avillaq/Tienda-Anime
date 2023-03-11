@@ -12,7 +12,7 @@
                     $sql = "SELECT * FROM productos WHERE categoria_id = $id_categoria ";
                     $respuesta = $conn->query($sql);
 
-                    /*Consulta para el nombre de la categoria*/
+                    /*Consulta solo para el nombre de la categoria*/
                     $stmt = "SELECT nombre_categoria FROM categorias WHERE id_categoria = $id_categoria";
                     $respuesta_categoria = $conn->query($stmt);
                     $nombre_categoria = $respuesta_categoria->fetch_assoc();

@@ -10,14 +10,29 @@ function init(){
         const btnSubmit = document.querySelector(".btn-submit");
         isLoggedIn = btnSubmit.getAttribute("isLoggedIn");
         if(isLoggedIn === "false"){ 
-            /**Sweetalert2 */    
+            /**Sweetalert2 */
+            alert("Necesitas Iniciar sesion...");
             return; 
         }
 
+        let datos = new FormData(formCarrito);
+        fetch(`inc/modelos/modelo-carritos.php`, {
+            method: 'POST',
+            body: datos
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                let respuesta = data.respuesta;
 
-        /** Por hacer... */
-        alert("Loading...");
+                if (respuesta === "exito") {
+                    alert("Añadido al carrito");
 
+                } else {
+                    alert("Error");
+
+                }
+            })
 
         
     });

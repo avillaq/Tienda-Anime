@@ -32,10 +32,14 @@
  
                 <form id="formulario-carrito" class="formulario-carrito">
                     <input type="number" name="cantidad" min=1 value=1>
-                    <!--id-producto-->
-                    <!--id-usuario-->
 
-                    <input type="submit" class="btn-submit" value="Añadir al carrito" isLoggedIn="false"><!--php en isloggedin-->
+                    <input type="hidden" name="id_producto" value="<?php echo $id_producto;?>">
+                    
+                    <input type="hidden" name="id_usuario" value="3"><!--php en value-->
+
+                    <input type="hidden" name="tipoAccion" value="añadir">
+
+                    <input type="submit" class="btn-submit" value="Añadir al carrito" isLoggedIn="true"><!--php en isloggedin-->
                 </form>
                     
                 <div class="info-detalles">
