@@ -23,24 +23,6 @@
                         <a href="#">Eliminar</a>
                     </div>
                 </div>
-                <div class="item-list">
-                    <img src="img/categorias/1187146-300x300.webp" alt="">
-                    <div class="item-detalle">
-                        <p>Camiseta de Anime de Ataque a los Titanes, Kyojin No Shingeki</p>
-                        <p>$50</p>
-                        <p><small>Cantidad:</small> 5</p>
-                        <a href="#">Eliminar</a>
-                    </div>
-                </div>
-                <div class="item-list">
-                    <img src="img/categorias/1187146-300x300.webp" alt="">
-                    <div class="item-detalle">
-                        <p>Camiseta de Anime de Ataque a los Titanes, Kyojin No Shingeki</p>
-                        <p>$50</p>
-                        <p><small>Cantidad:</small> 5</p>
-                        <a href="#">Eliminar</a>
-                    </div>
-                </div>
             </div>
             <div class="container-resumen">
                 <h4>RESUMEN</h4>

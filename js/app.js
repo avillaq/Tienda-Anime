@@ -26,10 +26,10 @@ function init(){
                 let respuesta = data.respuesta;
 
                 if (respuesta === "exito") {
-                    alert("Añadido al carrito");
+                    console.log("Añadido al carrito");
 
                 } else {
-                    alert("Error");
+                    console.log("Error");
 
                 }
             })
