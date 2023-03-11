@@ -21,6 +21,8 @@
                     <div class="container-input-submit">
                         <input type="submit" value="Iniciar sesion">
                     </div>
+
+                    <a href="register.php">Registarse</a>
                     
                 </form>
             </div>

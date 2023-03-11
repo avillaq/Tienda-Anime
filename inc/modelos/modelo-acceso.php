@@ -22,7 +22,8 @@ if($_POST["tipoAccion"] === "login"){
 
         if(password_verify($pass_usuario, $pass_hashed)) {
             $respuesta = array(
-                "respuesta" => "exito"
+                "respuesta" => "exito",
+                "accion" => "login"
             );
         }else{
             $respuesta = array(
@@ -41,25 +42,29 @@ if($_POST["tipoAccion"] === "login"){
     echo json_encode($respuesta);
 
 }
-else if($_POST['tipoAccion'] === "borrar"){
-    $id_registro = $_POST['id_registro'];
-    $id_usuario = $_POST['id_usuario'];
+else if($_POST['tipoAccion'] === "register"){
+    $nombre = $_POST['nombre_usuario'];
+    $correo = $_POST['correo_usuario'];
+    $pass = $_POST['pass_usuario'];
+
+    $opciones = array(
+        "cost"=>12
+    );
+
+    $pass_hashed = password_hash($pass, PASSWORD_BCRYPT,$opciones);
+
 
     try {
-        $stmt = $conn->prepare("DELETE FROM carritos WHERE id_carrito=?");
-        $stmt->bind_param("i",$id_registro);
+        
+        $stmt = $conn->prepare("INSERT INTO usuarios (nombre_usuario, correo_usuario, pass_usuario) VALUES(?,?,?)"); 
+        $stmt->bind_param("sss",$nombre,$correo, $pass_hashed);
+        
         $stmt->execute();
 
         if($stmt->affected_rows>0){
-
-            $sql = "SELECT SUM(total_carrito) as total FROM carritos WHERE id_usuario = $id_usuario";
-            $resultado = $conn->query($sql);
-
-            $nuevo_total = $resultado->fetch_assoc();
-
             $respuesta = array(
                 "respuesta" => "exito",
-                "nuevoTotal" => $nuevo_total["total"]
+                "accion" => "register"
             );
         }
         else{
@@ -67,16 +72,13 @@ else if($_POST['tipoAccion'] === "borrar"){
                 "respuesta" => "error"
             );
         }
-        
         $stmt->close();
         $conn->close();
 
-        
     } catch (Exception $e) {
         $respuesta = array(
             "respuesta" => $e->getMessage()
         );
-
     }
 
     echo json_encode($respuesta);

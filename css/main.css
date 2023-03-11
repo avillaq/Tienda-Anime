@@ -468,6 +468,7 @@ input{
     gap: 2rem;
     padding: 3rem 0;
 }
+
 form .form-field{
     border: 0;
     outline: none;
@@ -488,6 +489,11 @@ input[type="submit"] {
     border-radius: 0.5rem;
     width: 14rem;
     cursor: pointer;
+}
+.contenedor-login-register a{
+    color: #000;
+    align-self: center;
+    font-size: 1.4rem;
 }
 
 /*FontAwesome*/
