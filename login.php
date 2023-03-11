@@ -16,7 +16,10 @@
                     <label for="input-password">Contraseña: </label>
                     <input type="password" name="pass_usuario" id="input-password" class="form-field" placeholder="Contraseña" required>
 
-                    <input type="hidden" name="tipoAccion" value="añadir">
+                    <input type="hidden" name="tipoAccion" value="login">
+                    <input type="hidden" name="page" value="<?php echo $_GET["page"]?>">
+                    <input type="hidden" name="query" value="<?php echo $_GET["query"]?>">
+
 
                     <div class="container-input-submit">
                         <input type="submit" value="Iniciar sesion">

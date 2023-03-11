@@ -1,44 +1,44 @@
 document.addEventListener('DOMContentLoaded',init);
 function init(){
 
-    const formCarrito = document.querySelector("#formulario-carrito");
-    if(formCarrito !== null){
-        formCarrito.addEventListener('submit', function(e){
-            e.preventDefault();
+    const formUsuario = document.querySelector("#formulario-usuario");
+    formUsuario.addEventListener('submit', function(e){
+        e.preventDefault();
 
-            /**Verificamos que el usuario este logeado */
-            const btnSubmit = document.querySelector(".btn-submit");
-            isLoggedIn = btnSubmit.getAttribute("isLoggedIn");
-            if(isLoggedIn === "false"){ 
-                /**Sweetalert2 */
-                alert("Necesitas Iniciar sesion...");
-                return; 
-            }
+        let datos = new FormData(formUsuario);
+        fetch(`inc/modelos/modelo-acceso.php`, {
+            method: 'POST',
+            body: datos
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                let respuesta = data.respuesta;
 
-            let datos = new FormData(formCarrito);
-            fetch(`inc/modelos/modelo-carritos.php`, {
-                method: 'POST',
-                body: datos
+                if (respuesta === "exito") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Iniciando Sesion...',
+                        showConfirmButton: false,
+                        timer: 1200,
+                        heightAuto: false
+                      }).then(() =>window.location.replace(`${data.pagina}.php?${data.query}`));
+
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Usuario o contraseña incorrectos',
+                        showConfirmButton: false,
+                        timer: 1200,
+                        heightAuto: false
+                      })
+
+                }
             })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    let respuesta = data.respuesta;
 
-                    if (respuesta === "exito") {
-                        console.log("Añadido al carrito");
-
-                    } else {
-                        console.log("Error");
-
-                    }
-                })
-
-            
-        });
-    }
-
-    const btnBorrar = document.querySelectorAll(".btn-borrar");
+        
+    });
+    /* const btnBorrar = document.querySelectorAll(".btn-borrar");
     btnBorrar.forEach(function (btn) {
         btn.addEventListener("click", function (e) {
             e.preventDefault();
@@ -73,5 +73,5 @@ function init(){
         });
 
     })
-
+ */
 }
