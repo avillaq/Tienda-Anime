@@ -4,8 +4,6 @@ require "../funciones/conexionbd.php";
 if($_POST["tipoAccion"] === "login"){
     $nombre_usuario = $_POST["nombre_usuario"];
     $pass_usuario = $_POST["pass_usuario"];
-    $page = $_POST["page"];
-    $query = $_POST["query"];
     
     try {
 
@@ -24,9 +22,7 @@ if($_POST["tipoAccion"] === "login"){
 
         if(password_verify($pass_usuario, $pass_hashed)) {
             $respuesta = array(
-                "respuesta" => "exito",
-                "pagina" => $page,
-                "query" => $query
+                "respuesta" => "exito"
             );
         }else{
             $respuesta = array(

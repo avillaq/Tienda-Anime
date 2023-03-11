@@ -22,7 +22,7 @@ function init(){
                         showConfirmButton: false,
                         timer: 1200,
                         heightAuto: false
-                      }).then(() =>window.location.replace(`${data.pagina}.php?${data.query}`));
+                      }).then(() =>window.location.replace(`index.php`));
 
                 } else {
                     Swal.fire({
