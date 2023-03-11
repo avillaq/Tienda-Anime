@@ -29,7 +29,11 @@
             <div class="user-menu">
                 <a href="#"><i class="fa-regular fa-user"></i> Alex</a>
                 <a href="#" id="ver-carrito" isLoggedIn="true"><i class="fa-solid fa-cart-shopping"></i> Carrito</a><!--php en isloggedin-->
-                <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a>
+
+                <a href="login.php"><i class="fa-regular fa-user"></i> Iniciar Sesion</a>
+
+                <!-- <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a> -->
+
             </div>
         </div>
     </header>

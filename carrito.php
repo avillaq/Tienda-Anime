@@ -42,7 +42,7 @@
             </div>
             <div class="container-resumen">
                 <h4>RESUMEN</h4>
-                <p id="totalCompra">Total: $<?php echo $total?></p><!-- Cambiar precios dinamicamente-->
+                <p id="totalCompra">Total: $<?php echo $total?></p>
                 <a href="#">Procesar Compra</a>
             </div>
         </div>

@@ -5,6 +5,7 @@
 html {
     box-sizing: border-box;
     font-size:62.5%; /*1rem = 10px*/
+    height: 100%;
 }
 body {
     font-family: "Open Sans",Verdana,sans-serif;
@@ -14,6 +15,10 @@ body {
     padding: 0;
     background-color: #353030;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
 }
 img {
     max-width: 100%; /*Imagen responsiva*/
@@ -168,10 +173,12 @@ h3{
 }
 
 /*Footer*/
+footer{
+    margin-top: auto;
+}
 .container-footer{
     display: flex;
     flex-direction: column;
-    
 }
 .container-footer .info-footer{
     display: flex;
@@ -356,6 +363,7 @@ h3{
     border-radius: 0.5rem;
     background-color: #c32b20;
     width: 50%;
+    min-width: 16.5rem;
     padding: 0.4rem 0;
     text-align: center;
     transition: background-color 0.3s ease-in-out;
