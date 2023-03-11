@@ -193,7 +193,7 @@ main {
 }
 
 /*Craer nuevo registro y editar*/
-.contenedor-option .contenedor-añadir, .contenedor-editar{
+.contenedor-option .contenedor-añadir,.contenedor-option .contenedor-editar{
     display: flex ;
     flex-direction: column;
     align-items: center;

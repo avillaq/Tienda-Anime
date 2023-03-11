@@ -429,3 +429,65 @@ footer{
     font-size: 2.5rem;
     margin-left: 1rem;
 }
+
+/* Login y Register*/
+
+/*Craer nuevo registro y editar*/
+
+input{
+    font-family: inherit;
+    font-size: 1.8rem;
+}
+.contenedor-form{
+    width: 40%;
+    margin: 2rem auto;
+    
+}
+.contenedor-form h2{
+    text-align: center;
+    background-color: #3b3b3b ;
+    padding: 1rem;
+    border-bottom: 3px solid #6841db;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.contenedor-form .contenedor-login-register{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6dfff;
+    color: #000;
+    border-radius: 1rem;
+}
+
+.contenedor-form .contenedor-login-register form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+form .form-field{
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #353030;
+    padding-left: 0.5rem;
+    background-color: #e6dfff;
+}
+
+.container-input-submit{
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"] {
+    border: 0;
+    background-color: #6841db;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 14rem;
+    cursor: pointer;
+}
+
+
