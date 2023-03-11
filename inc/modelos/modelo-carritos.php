@@ -47,14 +47,23 @@ if($_POST["tipoAccion"] === "añadir"){
 }
 else if($_POST['tipoAccion'] === "borrar"){
     $id_registro = $_POST['id_registro'];
+    $id_usuario = $_POST['id_usuario'];
+
     try {
         $stmt = $conn->prepare("DELETE FROM carritos WHERE id_carrito=?");
         $stmt->bind_param("i",$id_registro);
         $stmt->execute();
 
         if($stmt->affected_rows>0){
+
+            $sql = "SELECT SUM(total_carrito) as total FROM carritos WHERE id_usuario = $id_usuario";
+            $resultado = $conn->query($sql);
+
+            $nuevo_total = $resultado->fetch_assoc();
+
             $respuesta = array(
-                "respuesta" => "exito"
+                "respuesta" => "exito",
+                "nuevoTotal" => $nuevo_total["total"]
             );
         }
         else{

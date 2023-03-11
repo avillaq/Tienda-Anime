@@ -26,14 +26,13 @@
 
                     $producto = json_decode($carrito["producto_carrito"]);
                 ?>
-
                     <div class="item-list">
                         <img src="img/productos/<?php echo $producto->url_img?>" alt="">
                         <div class="item-detalle">
                             <p><?php echo $producto->nombre_producto?></p>
                             <p>$<?php echo $producto->precio_producto?></p>
                             <p><small>Cantidad:</small> <?php echo $producto->cantidad?></p>
-                            <a href="#" class="btn-borrar" id_registro="<?php echo $carrito["id_carrito"]?>">Eliminar</a>
+                            <a href="#" class="btn-borrar" id_usuario="3" id_registro="<?php echo $carrito["id_carrito"]?>">Eliminar</a> <!-- Falta el id_usuario = 3 -->
                         </div>
                     </div>
 
@@ -43,7 +42,7 @@
             </div>
             <div class="container-resumen">
                 <h4>RESUMEN</h4>
-                <p>Total: $<?php echo $total?></p>
+                <p id="totalCompra">Total: $<?php echo $total?></p><!-- Cambiar precios dinamicamente-->
                 <a href="#">Procesar Compra</a>
             </div>
         </div>

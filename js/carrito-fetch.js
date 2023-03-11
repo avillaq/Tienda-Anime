@@ -45,6 +45,8 @@ function init(){
             
             let datos = new FormData();
             datos.append("id_registro", btn.getAttribute("id_registro"));
+            datos.append("id_usuario", btn.getAttribute("id_usuario"));
+
             datos.append("tipoAccion", "borrar");
 
             fetch(`inc/modelos/modelo-carritos.php`, {
@@ -55,10 +57,13 @@ function init(){
                 .then(data => {
                     console.log(data);
                     let respuesta = data.respuesta;
+                    let nuevoTotal = data.nuevoTotal;
+
                     if (respuesta === "exito") {
                         
                         btn.parentElement.parentElement.remove();
-
+                        document.querySelector("#totalCompra").textContent = `Total: $${nuevoTotal}`;
+                        
                     } else {
                         
                     }
