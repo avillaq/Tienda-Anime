@@ -25,6 +25,7 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/carrito-fetch.js"></script>
     
 </body>
 </html>

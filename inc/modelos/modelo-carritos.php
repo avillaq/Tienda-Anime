@@ -45,11 +45,41 @@ if($_POST["tipoAccion"] === "añadir"){
     echo json_encode($respuesta);
 
 }
+else if($_POST['tipoAccion'] === "borrar"){
+    $id_registro = $_POST['id_registro'];
+    try {
+        $stmt = $conn->prepare("DELETE FROM carritos WHERE id_carrito=?");
+        $stmt->bind_param("i",$id_registro);
+        $stmt->execute();
 
+        if($stmt->affected_rows>0){
+            $respuesta = array(
+                "respuesta" => "exito"
+            );
+        }
+        else{
+            $respuesta = array(
+                "respuesta" => "error"
+            );
+        }
+        
+        $stmt->close();
+        $conn->close();
+
+        
+    } catch (Exception $e) {
+        $respuesta = array(
+            "respuesta" => $e->getMessage()
+        );
+
+    }
+
+    echo json_encode($respuesta);
+    
+}
 
 function array_push_assoc(array &$arrayDatos, array $values){
     $arrayDatos = array_merge($arrayDatos, $values);
 }
-
 
 ?>

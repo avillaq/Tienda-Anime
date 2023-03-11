@@ -1,40 +1,19 @@
 document.addEventListener('DOMContentLoaded',init);
 function init(){
-
-    const formCarrito = document.querySelector("#formulario-carrito");
-
-    formCarrito.addEventListener('submit', function(e){
+    
+    ver_carrito = document.querySelector("#ver-carrito");
+    ver_carrito.addEventListener('click',function(e){
         e.preventDefault();
-
-        /**Verificamos que el usuario este logeado */
-        const btnSubmit = document.querySelector(".btn-submit");
-        isLoggedIn = btnSubmit.getAttribute("isLoggedIn");
+        isLoggedIn = ver_carrito.getAttribute("isLoggedIn");
         if(isLoggedIn === "false"){ 
             /**Sweetalert2 */
             alert("Necesitas Iniciar sesion...");
             return; 
         }
-
-        let datos = new FormData(formCarrito);
-        fetch(`inc/modelos/modelo-carritos.php`, {
-            method: 'POST',
-            body: datos
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                let respuesta = data.respuesta;
-
-                if (respuesta === "exito") {
-                    console.log("Añadido al carrito");
-
-                } else {
-                    console.log("Error");
-
-                }
-            })
-
-        
+        else{
+            window.location = "carrito.php";
+        }
     });
+
 
 }
