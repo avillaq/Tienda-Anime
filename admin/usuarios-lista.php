@@ -33,7 +33,6 @@ require "inc/templates/header.php";
 
                             <td>
                                 <a class="btn-editar" href="usuarios-editar.php?id=<?php echo $usuario["id_usuario"]?>"><i class="fa-solid fa-pen"></i></a>
-                                <a href="#" class="btn-borrar" id_registro="<?php echo $usuario["id_usuario"]?>" tipoOpcion="usuarios" ><i class="fa-solid fa-trash-can"></i></a>
 
                             </td>
                         </tr>
