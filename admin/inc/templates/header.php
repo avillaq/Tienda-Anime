@@ -24,7 +24,7 @@
                 <img class="logo-img" src="../img/logo.png" alt="Logo">
                 <a href="index.php" class="logo-title">TIENDA ANIME - <small>Administracion</small></a>
             </div>
-            <a href="#" class="btn-out"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a>
+            <a href="#" id="btnCerrarSesion" class="btn-out"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a>
         </div>
 
         

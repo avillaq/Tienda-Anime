@@ -1,4 +1,6 @@
 <?php
+require "inc/funciones/sesiones.php";
+
 require "inc/templates/header.php";
 ?>
     <div class="container">

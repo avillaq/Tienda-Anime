@@ -90,7 +90,7 @@ function init(){
                 }else {
                         Swal.fire({
                             icon: 'error',
-                            title: 'Usuario o contraseña incorrectos',
+                            title: 'Hubo un error...',
                             showConfirmButton: false,
                             timer: 1500,
                             heightAuto: false

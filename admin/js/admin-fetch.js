@@ -102,4 +102,42 @@ function init() {
 
         })
     })
+
+
+    const btnCerrarSesion = document.querySelector("#btnCerrarSesion");
+    btnCerrarSesion.addEventListener("click", function(e) {
+        e.preventDefault();
+        
+        let datos = new FormData();
+        datos.append("tipoAccion", "loginOut");
+
+        fetch(`inc/modelos/modelo-acceso.php`, {
+            method: 'POST',
+            body: datos
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                let respuesta = data.respuesta;
+
+                if (respuesta === "exito") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Cerrando Sesion...',
+                        showConfirmButton: false,
+                        timer: 1200,
+                        heightAuto: false
+                      }).then(() =>window.location.replace(`index.php`));
+                }else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Hubo un error...',
+                            showConfirmButton: false,
+                            timer: 1500,
+                            heightAuto: false
+                        })
+
+                }
+            })
+    })
 }
