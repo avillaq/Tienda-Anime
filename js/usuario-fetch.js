@@ -17,11 +17,12 @@ function init(){
                 .then(data => {
                     console.log(data);
                     let respuesta = data.respuesta;
-                    let accion = data.accion;
-                    let id = data.id;
 
                     if (respuesta === "exito") {
+                        let accion = data.accion;
+
                         if(accion === "login"){
+                            let id = data.id;
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Iniciando Sesion...',
@@ -46,14 +47,28 @@ function init(){
                             }).then(() =>window.location.replace(`login.php`));
                         }
                     
-                    }else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Usuario o contraseña incorrectos',
-                            showConfirmButton: false,
-                            timer: 1500,
-                            heightAuto: false
-                        })
+                    }else if(respuesta === "error"){
+                        let accion = data.accion;
+
+                        if(accion === "login"){
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Usuario o contraseña incorrectos',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                heightAuto: false
+                            })
+                        }
+                        else if(accion === "register"){
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Nombre de usuario ya registrado',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                heightAuto: false
+                            })
+                        }
+                        
 
                     }
                 })

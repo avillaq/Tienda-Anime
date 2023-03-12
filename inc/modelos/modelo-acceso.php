@@ -12,7 +12,8 @@ if($_POST["tipoAccion"] === "login"){
 
         if($resultado->num_rows === 0){/**El usuario no existe */
             $respuesta = array(
-                "respuesta" => "error"
+                "respuesta" => "error",
+                "accion" => "login"
             );
             die(json_encode($respuesta));
         }
@@ -34,7 +35,8 @@ if($_POST["tipoAccion"] === "login"){
 
         }else{
             $respuesta = array(
-                "respuesta" => "error"
+                "respuesta" => "error",
+                "accion" => "login"
             );
         }
 
@@ -54,6 +56,17 @@ else if($_POST['tipoAccion'] === "register"){
     $correo = $_POST['correo_usuario'];
     $pass = $_POST['pass_usuario'];
 
+    $sql = "SELECT nombre_usuario FROM usuarios WHERE nombre_usuario = '$nombre'";
+    $resultado = $conn->query($sql);
+
+    if($resultado->num_rows > 0){/**El usuario ya existe (Los usuarios no se deben repetir)*/
+        $respuesta = array(
+            "respuesta" => "error",
+            "accion" => "register"
+        );
+        die(json_encode($respuesta));
+    }
+    
     $opciones = array(
         "cost"=>12
     );
