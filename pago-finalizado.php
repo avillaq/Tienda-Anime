@@ -1,7 +1,7 @@
 <?php
     require "inc/funciones/sesiones.php";
 
-    if (!isset($_GET["paymentId"]) || !isset($_GET["id_pago"])) {
+    if (!isset($_GET["paymentId"]) || !isset($_GET["id_pago"]) || !isset($_GET["total_usuario"])) {
         header("Location:index.php");
         exit;
     }
@@ -23,6 +23,14 @@
 
                 $paymentId = $_GET["paymentId"];
 
+                $total_usuario = (float)$_GET["total_usuario"];
+
+                /**Total usuario que tiene en la base de datos */
+                $total_usuario_bd = (float)$_SESSION["total_actual_usuario"];
+                
+                /**Aumentamos su Total usuario */
+                $total_usuario = $total_usuario + $total_usuario_bd;
+
                 //Peticion a rest API
                 $pago = Payment::get($paymentId, $apiContext);
                 $execution = new PaymentExecution();
@@ -36,19 +44,23 @@
 
             <?php if ($respuesta === "completed") { ?>
 
-            
+                <?php
+                    require "inc/funciones/conexionbd.php";
+                    $stmt = $conn->prepare("DELETE FROM carritos WHERE id_usuario =?");
+                    $stmt->bind_param("i",$_SESSION["id_usuario"]);
+                    $stmt->execute();
+
+                    $stmt = $conn->prepare("UPDATE usuarios SET total_usuario = ?, editado=NOW() WHERE id_usuario = ?");
+                    $stmt->bind_param("di",$total_usuario,$_SESSION["id_usuario"]);
+                    $stmt->execute();
+
+                    $stmt->close();
+                    $conn->close();
+                ?>
                     <img src="img/pagoExito.png" alt="" class="img-finalizado">
                     <div class="text-finalizado">
                         <p>Gracias por tu compra!</p>
                     </div>
-
-                    <!-- /* require_once("inc/functions/db_connection.php");
-                    $stmt = $connection->prepare("UPDATE registrados SET pagado =? WHERE ID_registrado =?");
-                    $pagado = 1;
-                    $stmt->bind_param("ii",$pagado, $id_pago);
-                    $stmt->execute();
-                    $stmt->close();
-                    $connection->close(); */ -->
 
                 <?php }else{ ?>
 

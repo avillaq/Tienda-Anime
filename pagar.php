@@ -1,6 +1,7 @@
 <?php
 if (!isset($_POST["submit"])) {
     header("Location:index.php");
+    exit;
 }
 
 use PayPal\Api\Payer;
@@ -53,7 +54,6 @@ try {
     echo "Error: ".$e->getMessage();
 }
 
-
 $listaArticulos = new ItemList(); 
 $listaArticulos->setItems($arreglo_pedido);
 
@@ -73,8 +73,8 @@ $transaccion->setAmount($cantidad)
         
 
 $redireccionar = new RedirectUrls();
-$redireccionar->setReturnUrl(URL_SITIO."/pago-finalizado.php?id_pago={$id_registro}")
-                ->setCancelUrl(URL_SITIO."/pago-finalizado.php?id_pago={$id_registro}");
+$redireccionar->setReturnUrl(URL_SITIO."/pago-finalizado.php?id_pago={$id_registro}&total_usuario={$total}")
+                ->setCancelUrl(URL_SITIO."/pago-finalizado.php?id_pago={$id_registro}&total_usuario={$total}");
 
 
 $pago = new Payment();
