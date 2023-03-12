@@ -15,7 +15,7 @@
                         $id_user = $_SESSION['id_usuario'];
                         
                         /*Consulta para los carritos*/
-                        $sql = "SELECT * FROM carritos WHERE id_usuario = $id_user"; /** Falta el id_usuario = 3 */
+                        $sql = "SELECT * FROM carritos WHERE id_usuario = $id_user";
                         $respuesta = $conn->query($sql);
 
                         /*Precio total de los pruductos*/

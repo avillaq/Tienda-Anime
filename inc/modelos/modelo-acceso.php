@@ -23,7 +23,8 @@ if($_POST["tipoAccion"] === "login"){
         if(password_verify($pass_usuario, $pass_hashed)) {
             $respuesta = array(
                 "respuesta" => "exito",
-                "accion" => "login"
+                "accion" => "login",
+                "id" => $usuario["id_usuario"]
             );
             /* Iniciamos sesion*/
             session_start();

@@ -18,7 +18,7 @@ function init(){
                     console.log(data);
                     let respuesta = data.respuesta;
                     let accion = data.accion;
-
+                    let id = data.id;
 
                     if (respuesta === "exito") {
                         if(accion === "login"){
@@ -28,7 +28,14 @@ function init(){
                                 showConfirmButton: false,
                                 timer: 1200,
                                 heightAuto: false
-                            }).then(() =>window.location.replace(`index.php`));
+                            }).then(() =>{
+                                if(id === "2"){
+                                    window.location.replace(`admin/index.php`);
+                                }else{
+                                    window.location.replace(`index.php`);
+                                }    
+                            })
+
                         }else if(accion === "register"){
                             Swal.fire({
                                 icon: 'success',
