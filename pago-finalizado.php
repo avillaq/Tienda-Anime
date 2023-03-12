@@ -11,9 +11,8 @@
 
     <div class="wrapper">
 
-        <div class="productos">
+        <div class="pago-finalizado">
 
-            <h2>Resumen Registro</h2>
             <?php
                 $id_pago = (int)$_GET["id_pago"];
 
@@ -30,31 +29,30 @@
                 $respuesta = $resultado->transactions[0]->related_resources[0]->sale->state;
             ?>
 
-            <?php if ($respuesta === "completed") {
+            <?php if ($respuesta === "completed") { ?>
 
-                    echo "<div class='resultado correcto'>";
+            
+                    <img src="img/pagoExito.png" alt="" class="img-finalizado">
+                    <div class="text-finalizado">
+                        <p>Gracias por tu compra!</p>
+                    </div>
 
-                    echo "El pago se realizo correctamente <br>";
-                    echo "El ID es $paymentId";
-
-                    echo "</div>";
-
-                    /* require_once("inc/functions/db_connection.php");
+                    <!-- /* require_once("inc/functions/db_connection.php");
                     $stmt = $connection->prepare("UPDATE registrados SET pagado =? WHERE ID_registrado =?");
                     $pagado = 1;
                     $stmt->bind_param("ii",$pagado, $id_pago);
                     $stmt->execute();
                     $stmt->close();
-                    $connection->close(); */
+                    $connection->close(); */ -->
 
-                }else{
-                    echo "<div class='resultado error'>";
+                <?php }else{ ?>
 
-                    echo "El pago no se realizo<br>";  
+                    <img src="img/pagoError.png" alt="" class="img-finalizado">
+                    <div class="text-finalizado">
+                        <p>Hubo un error al realiza el pago :&#40; </p>
+                    </div>   
 
-                    echo "</div>";            
-                }
-            ?>
+                <?php } ?>
         
         </div>   
     </div>

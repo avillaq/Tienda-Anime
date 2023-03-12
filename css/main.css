@@ -531,3 +531,22 @@ input[type="submit"] {
     color: rgb(163, 0, 33);
 }
 
+/* Al finalizar el pago */
+.pago-finalizado{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+}
+.pago-finalizado .img-finalizado{
+    width: 55%;
+    min-width: 40rem;
+}
+.pago-finalizado .text-finalizado{
+    display: flex;
+    align-items: center;
+}
+.pago-finalizado .text-finalizado p{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
