@@ -83,6 +83,8 @@ function init() {
 
                         btn.parentElement.parentElement.remove();
                         document.querySelector("#totalCompra").textContent = `Total: $${nuevoTotal}`;
+                        document.querySelector("#total_usuario").value = `${nuevoTotal}`;
+
 
                     } else {
                         mostrarNotificacion("Hubo un error!", "error")

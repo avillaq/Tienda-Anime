@@ -48,7 +48,12 @@
             <div class="container-resumen">
                 <h4>RESUMEN</h4>
                 <p id="totalCompra">Total: $<?php echo $total?></p>
-                <a href="#">Procesar Compra</a>
+                <form action="pagar.php" method="POST">
+                    <input type="hidden" name="id_usuario" value="<?php echo $id_user?>">
+                    <input type="hidden" id="total_usuario" name="total_usuario" value="<?php echo $total?>">
+
+                    <input type="submit" name="submit" value="Procesar Compra">
+                </form>
             </div>
         </div>
     </div>
