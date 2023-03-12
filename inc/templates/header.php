@@ -27,13 +27,20 @@
                 <a href="categorias.php">Categorias</a>
             </div>
             <div class="user-menu">
-                <a href="#"><i class="fa-regular fa-user"></i> Alex</a>
-                <a href="#" id="ver-carrito" isLoggedIn="true"><i class="fa-solid fa-cart-shopping"></i> Carrito</a><!--php en isloggedin-->
+                
+                <?php
+                    $path = $_SERVER["PHP_SELF"];
+                    $archivo = basename($path, ".php");
 
-    
-                <a href="login.php"><i class="fa-regular fa-user"></i> Iniciar Sesion</a>
-
-                <!-- <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a> -->
+                    ($archivo==="carrito") ? "": session_start(); /* Caso especial Carrrito */
+                ?>  
+                <?php if(isset($_SESSION["id_usuario"])){?>              
+                    <a><i class="fa-regular fa-user"></i> <?php echo $_SESSION["nombre_usuario"]?></a>
+                    <a href="carrito.php"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+                    <a href="#" id="btnCerrarSesion"><i class="fa-solid fa-right-to-bracket"></i> Cerrar Sesion</a>
+                <?php }else{?>
+                    <a href="login.php"><i class="fa-regular fa-user"></i> Iniciar Sesion</a>
+                <?php }?>
 
             </div>
         </div>

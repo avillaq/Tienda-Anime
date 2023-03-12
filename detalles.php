@@ -35,11 +35,11 @@
 
                     <input type="hidden" name="id_producto" value="<?php echo $id_producto;?>">
                     
-                    <input type="hidden" name="id_usuario" value="3"><!--php en value-->
+                    <input type="hidden" name="id_usuario" value="<?php echo isset($_SESSION["id_usuario"]) ? $_SESSION["id_usuario"] : ""?>">
 
                     <input type="hidden" name="tipoAccion" value="añadir">
 
-                    <input type="submit" class="btn-submit" value="Añadir al carrito" isLoggedIn="true"><!--php en isloggedin-->
+                    <input type="submit" class="btn-submit" value="Añadir al carrito" isLoggedIn="<?php echo isset($_SESSION["id_usuario"])?>">
                 </form>
                     
                 <div class="info-detalles">

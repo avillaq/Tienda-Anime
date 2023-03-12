@@ -1,4 +1,7 @@
+
 <?php
+    require "inc/funciones/sesiones.php";
+
     require "inc/templates/header.php";
 ?>
     <div class="wrapper">
@@ -9,8 +12,10 @@
                     try {
                         require "inc/funciones/conexionbd.php";
 
+                        $id_user = $_SESSION['id_usuario'];
+                        
                         /*Consulta para los carritos*/
-                        $sql = "SELECT * FROM carritos WHERE id_usuario = '3'"; /** Falta el id_usuario = 3 */
+                        $sql = "SELECT * FROM carritos WHERE id_usuario = $id_user"; /** Falta el id_usuario = 3 */
                         $respuesta = $conn->query($sql);
 
                         /*Precio total de los pruductos*/
@@ -32,7 +37,7 @@
                             <p><?php echo $producto->nombre_producto?></p>
                             <p>$<?php echo $producto->precio_producto?></p>
                             <p><small>Cantidad:</small> <?php echo $producto->cantidad?></p>
-                            <a href="#" class="btn-borrar" id_usuario="3" id_registro="<?php echo $carrito["id_carrito"]?>">Eliminar</a> <!-- Falta el id_usuario = 3 -->
+                            <a href="#" class="btn-borrar" id_usuario="<?php echo $id_user;?>" id_registro="<?php echo $carrito["id_carrito"]?>">Eliminar</a> 
                         </div>
                     </div>
 

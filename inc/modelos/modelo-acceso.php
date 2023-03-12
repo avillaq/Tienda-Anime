@@ -7,7 +7,7 @@ if($_POST["tipoAccion"] === "login"){
     
     try {
 
-        $sql = "SELECT nombre_usuario,pass_usuario FROM usuarios WHERE nombre_usuario = '$nombre_usuario'";
+        $sql = "SELECT id_usuario,nombre_usuario,pass_usuario FROM usuarios WHERE nombre_usuario = '$nombre_usuario'";
         $resultado = $conn->query($sql);
 
         if($resultado->num_rows === 0){/**El usuario no existe */
@@ -25,6 +25,12 @@ if($_POST["tipoAccion"] === "login"){
                 "respuesta" => "exito",
                 "accion" => "login"
             );
+            /* Iniciamos sesion*/
+            session_start();
+            $_SESSION["id_usuario"] = $usuario["id_usuario"];
+            $_SESSION["nombre_usuario"] = $usuario["nombre_usuario"];
+
+
         }else{
             $respuesta = array(
                 "respuesta" => "error"
@@ -85,5 +91,19 @@ else if($_POST['tipoAccion'] === "register"){
     
 }
 
+else if($_POST["tipoAccion"] === "loginOut"){
+    session_start();
 
+    // restablece todas las variables de sesión a sus valores predeterminados
+    $_SESSION = array();
+
+    // destruye la sesión actual
+    session_destroy();
+
+    $respuesta = array(
+        "respuesta" => "exito"
+    );
+    
+    echo json_encode($respuesta);
+}
 ?>
