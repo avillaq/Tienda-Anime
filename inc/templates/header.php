@@ -32,7 +32,7 @@
                     $path = $_SERVER["PHP_SELF"];
                     $archivo = basename($path, ".php");
 
-                    ($archivo==="carrito") ? "": session_start(); /* Caso especial Carrrito */
+                    ($archivo==="carrito" || $archivo==="pago-finalizado") ? "": session_start(); /* Caso especial Carrrito */
                 ?>  
                 <?php if(isset($_SESSION["id_usuario"])){?>              
                     <a><i class="fa-regular fa-user"></i> <?php echo $_SESSION["nombre_usuario"]?></a>

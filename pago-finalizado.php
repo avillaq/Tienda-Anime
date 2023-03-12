@@ -1,7 +1,12 @@
 <?php
+    require "inc/funciones/sesiones.php";
+
+    if (!isset($_GET["paymentId"]) || !isset($_GET["id_pago"])) {
+        header("Location:index.php");
+        exit;
+    }
 
 	require "inc/templates/header.php";
-
 
     use PayPal\Rest\ApiContext;
     use PayPal\Api\PaymentExecution;

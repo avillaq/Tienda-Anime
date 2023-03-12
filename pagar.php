@@ -1,6 +1,6 @@
 <?php
 if (!isset($_POST["submit"])) {
-    exit("Hubo un error");
+    header("Location:index.php");
 }
 
 use PayPal\Api\Payer;
@@ -16,11 +16,10 @@ require "inc/paypal.php";
 
 
 if(isset($_POST["submit"])){
-        $id_usuario = htmlspecialchars($_POST["id_usuario"]);
+    $id_usuario = htmlspecialchars($_POST["id_usuario"]);
 
-        $total = (float) htmlspecialchars($_POST["total_usuario"]);  
+    $total = (float) htmlspecialchars($_POST["total_usuario"]);  
 
-    
 }
 
 $compra = new Payer();
@@ -95,5 +94,6 @@ try {
 $aprobado = $pago->getApprovalLink();
 
 header("Location:{$aprobado}");
+exit;
 
-?> */
+?>
