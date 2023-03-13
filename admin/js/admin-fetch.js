@@ -5,7 +5,14 @@ function init() {
     if(formularioArchivos !== null){
         formularioArchivos.addEventListener('submit', function (e) {
             e.preventDefault();
+
+    
             let datos = new FormData(formularioArchivos);
+
+            if (isValidRegisterData(datos.get("tipoAccion") , datos.get("tipoOpcion"))) {
+                mostrarNotificacion("Datos no validos", "error");
+                return;
+            }
     
             fetch(`inc/modelos/modelo-${datos.get("tipoOpcion")}.php`, {
                 method: 'POST',
@@ -140,4 +147,49 @@ function init() {
                 }
             })
     })
+    function isValidRegisterData(accion, opcion) {
+        if(opcion === "usuarios"){
+            let inputName = document.querySelector("#input-nombre").value;
+            let inputPassword = document.querySelector("#input-password").value;
+
+            let inputCorreo = document.querySelector("#input-correo").value;
+            let expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(accion === "editar"){
+                return inputName.trim()==="" || !expresionRegular.test(inputCorreo);
+            }
+            return inputName.trim()==="" || inputPassword.trim()==="" || !expresionRegular.test(inputCorreo);
+
+        }else if(opcion  === "productos"){
+            let inputName = document.querySelector("#input-nombre").value;
+            let inputPrecio = document.querySelector("#input-precio").value;
+            let selectCategoria = document.querySelector("#select-categoria").value;
+
+            return inputName.trim()==="" || inputPrecio === "0" || selectCategoria === "0";
+
+        }else if(opcion  === "categorias"){
+            let inputName = document.querySelector("#input-nombre").value;
+            return inputName.trim()==="";
+        }
+    }
+    //Notificacion en pantalla
+    function mostrarNotificacion(mensaje, clase) {
+        const notificacion = document.createElement("div");
+        notificacion.classList.add(clase, "notificacion", "sombra");
+        notificacion.textContent = mensaje;
+
+        main = document.querySelector("main");
+        main.appendChild(notificacion)
+
+        //Ocultar y mostrar la notificacion
+
+        notificacion.classList.add("visible");
+        setTimeout(() => {
+            notificacion.classList.remove("visible");
+            setTimeout(() => {
+                notificacion.remove();
+
+            }, 500);
+        }, 2000);
+    }
 }

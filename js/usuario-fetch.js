@@ -9,6 +9,12 @@ function init(){
             e.preventDefault();
 
             let datos = new FormData(formUsuario);
+
+            if (isValidLoginRegister(datos.get("tipoAccion"))) {
+                mostrarNotificacion("Datos no validos", "error")
+                return;
+            }
+
             fetch(`inc/modelos/modelo-acceso.php`, {
                 method: 'POST',
                 body: datos
@@ -76,6 +82,40 @@ function init(){
             
         });
 
+    }
+
+    function isValidLoginRegister(accion) {
+        let inputName = document.querySelector("#input-nombre").value;
+        let inputPassword = document.querySelector("#input-password").value;
+
+        if(accion === "login"){
+            return inputName.trim()==="" || inputPassword.trim()==="";
+        }else if(accion  === "register"){
+            let inputCorreo = document.querySelector("#input-correo").value;
+            let expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return inputName.trim()==="" || inputPassword.trim()==="" || !expresionRegular.test(inputCorreo);
+        }
+    }
+
+    //Notificacion en pantalla
+    function mostrarNotificacion(mensaje, clase) {
+        const notificacion = document.createElement("div");
+        notificacion.classList.add(clase, "notificacion", "sombra");
+        notificacion.textContent = mensaje;
+
+        main = document.querySelector("main");
+        main.appendChild(notificacion)
+
+        //Ocultar y mostrar la notificacion
+
+        notificacion.classList.add("visible");
+        setTimeout(() => {
+            notificacion.classList.remove("visible");
+            setTimeout(() => {
+                notificacion.remove();
+
+            }, 500);
+        }, 2000);
     }
 
     const btnCerrarSesion = document.querySelector("#btnCerrarSesion");

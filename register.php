@@ -19,9 +19,6 @@
                     <label for="input-password">Contraseña: </label>
                     <input type="password" name="pass_usuario" id="input-password" class="form-field" placeholder="Contraseña" required>
 
-                    <label for="input-confirm-password">Confirma la contraseña: </label>
-                    <input type="password" id="input-confirm-password" class="form-field" placeholder="Confirma la contraseña" required>
-
                     <input type="hidden" name="tipoAccion" value="register">
 
                     <div class="container-input-submit">

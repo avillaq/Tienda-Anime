@@ -51,11 +51,10 @@ h3{
 
 /*Side header*/
 header{
-    /*Con estas tres lineas podemos hacer que el menu se mueva con nosotros a medida que hagamos scroll*/
-    position: fixed;
+    /*Con estas tres lineas podemos hacer que el menu se mueva con nosotros a medida que hagamos scroll. Sin javascript*/
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    z-index: 1;
 }
 .side-header{
     background-color: #282828;
@@ -538,7 +537,13 @@ input[type="submit"] {
     font-size: 1.4rem;
 }
 
+
 /*FontAwesome*/
+.swal2-popup {
+    font-size: 1.5rem !important;
+}
+
+/*Notificaciones*/
 .sombra {
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
@@ -546,11 +551,6 @@ input[type="submit"] {
     border-radius: 10px;
 }
 
-.swal2-popup {
-    font-size: 1.5rem !important;
-}
-
-/*Notificaciones*/
 .notificacion{
     position: fixed;
     top: 6.5rem;
