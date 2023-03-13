@@ -1,6 +1,21 @@
 <?php
     require "inc/templates/header.php";
 ?>
+
+    <div style="background-image:url('img/bg-inicio.webp'); background-size: cover; background-position: center 50%;">
+        <div class="bg-inicio" >
+            <div class="text-bg-inicio">
+                <p>FIGURAS, ROPA Y MUCHO MÁS EN TIENDA ANIME</p>
+                <p><b>Tienda oficial de Anime en español.</b> Figuras de los personajes principales de los animes del momento, ropa y accesorios, peluches, funkos y mucho más en Tienda Anime.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Productos 100% originales</li>
+                    <li><i class="fa-solid fa-check"></i> Nuevos productos cada mes</li>
+                    <li><i class="fa-solid fa-check"></i> Servicio de atención al cliente</li>
+                </ul>
+            </div>
+            <div style="width: 200px;height: 200px;"></div>
+        </div>
+    </div>
     <div class="wrapper">
         
             <div class="container-productos">

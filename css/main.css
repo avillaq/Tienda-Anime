@@ -124,6 +124,35 @@ h3{
     margin: 0;
 }
 /******************** Inicio **************************/
+/*Image de fondo*/
+.bg-inicio{
+    background: linear-gradient(130deg,#100e0e 40%,#F2295B61 100%);
+    display: flex;
+    justify-content: space-around;
+}
+.bg-inicio .text-bg-inicio{
+    width: 40%;
+    line-height: 1.2;
+    padding-top: 5rem;
+    padding-bottom: 12rem;
+
+}
+.text-bg-inicio p:first-child{
+    margin:0;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.text-bg-inicio p{
+    margin:2rem 0;
+    font-size: 1.6rem;
+}
+.text-bg-inicio ul li{
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+.text-bg-inicio ul li i{
+    color: #E92E5D;
+}
 
 /* Productos*/
 .container-productos{
