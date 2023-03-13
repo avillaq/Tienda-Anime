@@ -26,14 +26,23 @@ require "inc/templates/header.php";
                             echo "Error: ".$e->getMessage();
                         }
                     ?>
+
+                    <!--El primer usuario(admin) no se podra editar-->
+                    <?php $usuario=$respuesta->fetch_assoc()?>
+                    <tr>
+                        <td><?php echo $usuario["nombre_usuario"]?></td>
+                        <td><?php echo $usuario["correo_usuario"]?></td>
+                        <td>
+                            <a style="background-color:#017fa5;"class="btn-editar" ><i class="fa-solid fa-pen"></i></a>
+                        </td>
+                    </tr>
+
                     <?php while($usuario=$respuesta->fetch_assoc()){?>
                         <tr>
-                            <td><?php echo $usuario["nombre_usuario"]?></td><!--  style="word-break:break-all;  - esto en nombre de usuario"-->        
+                            <td><?php echo $usuario["nombre_usuario"]?></td>
                             <td><?php echo $usuario["correo_usuario"]?></td>
-
                             <td>
                                 <a class="btn-editar" href="usuarios-editar.php?id=<?php echo $usuario["id_usuario"]?>"><i class="fa-solid fa-pen"></i></a>
-
                             </td>
                         </tr>
                     <?php }
