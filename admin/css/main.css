@@ -139,6 +139,42 @@ main {
     text-align: center;
     color: #b1b1b1;
 }
+/**************** Dashboard*****************/
+.contenedor-dashboard{
+
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #17a2b8;
+    border-radius: 0.5rem;
+}
+.card-info .text-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    padding-bottom: 1rem;
+}
+.card-info .text-icon p{
+    margin: 0;
+}
+.card-info .text-icon .cantidad{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.card-info .text-icon i{
+    font-size: 6rem;
+}
+.card-info a{
+    background-color: #148a9d;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0;
+}
+
 
 /* Contenido General (lista - crear) */
 .container{
