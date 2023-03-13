@@ -86,6 +86,8 @@ function init() {
                         if(nuevoTotal===null){
                             nuevoTotal=0.0;
                             document.querySelector("#submit").disabled = true;
+
+                            document.querySelector("#container-lista").innerHTML=`<h2>Aun tienes productos en el carrito!!</h2>`;
                         }else{
                             document.querySelector("#submit").disabled = false;
                         }

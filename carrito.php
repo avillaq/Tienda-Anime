@@ -25,7 +25,7 @@
                 echo "Error: ".$e->getMessage();
             }
         ?>
-            <div class="container-lista">
+            <div class="container-lista" id="container-lista">
                 <?php if($respuesta->num_rows>0){ ?>
 
                     <?php while($carrito = $respuesta->fetch_assoc()){
