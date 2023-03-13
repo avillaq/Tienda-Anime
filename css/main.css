@@ -50,6 +50,13 @@ h3{
 }
 
 /*Side header*/
+header{
+    /*Con estas tres lineas podemos hacer que el menu se mueva con nosotros a medida que hagamos scroll*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 .side-header{
     background-color: #282828;
     display: grid;
