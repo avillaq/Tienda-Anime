@@ -192,8 +192,14 @@ h3{
     margin-left: 1rem;
 }
 .card p{
-    margin:  0.5rem 0;
+    margin:0.2rem 0;
 }
+/*Estrellas*/
+.card p i{
+    color: #E92E5D;
+    font-size: 1.2rem;
+}
+
 .card .nombre-producto{
     transition: color .2s ease-out;
 }

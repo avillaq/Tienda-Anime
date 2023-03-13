@@ -45,6 +45,9 @@
                         <div class="descripcion">
                             <p><small><?php echo $nombre_categoria["nombre_categoria"]?></small></p>
                             <a href="detalles.php?id_producto=<?php echo $producto["id_producto"]?>" class="nombre-producto"><?php echo $producto["nombre_producto"]?></a>
+
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+
                             <p><small>$<?php echo $producto["precio_producto"]?></small></p>
                         </div>
                     </div>
