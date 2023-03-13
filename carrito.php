@@ -25,26 +25,31 @@
                 echo "Error: ".$e->getMessage();
             }
         ?>
-        <?php if($respuesta->num_rows>0){  /*si el carrito tiene elemento, se enlistaran los productos y mostraremos el resumen*/?>
             <div class="container-lista">
+                <?php if($respuesta->num_rows>0){ ?>
 
-                <?php while($carrito = $respuesta->fetch_assoc()){
-                    $total += $carrito["total_carrito"];
+                    <?php while($carrito = $respuesta->fetch_assoc()){
+                        $total += $carrito["total_carrito"];
 
-                    $producto = json_decode($carrito["producto_carrito"]);
-                ?>
-                    <div class="item-list">
-                        <img src="img/productos/<?php echo $producto->url_img?>" alt="">
-                        <div class="item-detalle">
-                            <p><?php echo $producto->nombre_producto?></p>
-                            <p>$<?php echo $producto->precio_producto?></p>
-                            <p><small>Cantidad:</small> <?php echo $producto->cantidad?></p>
-                            <a href="#" class="btn-borrar" id_usuario="<?php echo $id_user;?>" id_registro="<?php echo $carrito["id_carrito"]?>">Eliminar</a> 
+                        $producto = json_decode($carrito["producto_carrito"]);
+                    ?>
+                        <div class="item-list">
+                            <img src="img/productos/<?php echo $producto->url_img?>" alt="">
+                            <div class="item-detalle">
+                                <p><?php echo $producto->nombre_producto?></p>
+                                <p>$<?php echo $producto->precio_producto?></p>
+                                <p><small>Cantidad:</small> <?php echo $producto->cantidad?></p>
+                                <a href="#" class="btn-borrar" id_usuario="<?php echo $id_user;?>" id_registro="<?php echo $carrito["id_carrito"]?>">Eliminar</a> 
+                            </div>
                         </div>
-                    </div>
 
-                <?php } $conn->close();?>
+                    <?php } $conn->close();?>
 
+                <?php }else{?>
+                    
+                    <h2>Aun tienes productos en el carrito!!</h2>
+
+                <?php }?>
                 
             </div>
             <div class="container-resumen">
@@ -52,21 +57,12 @@
                 <p id="totalCompra">Total: $<?php echo $total?></p>
                 <form action="pagar.php" method="POST">
                     <input type="hidden" name="id_usuario" value="<?php echo $id_user?>">
-                    <input type="hidden" id="total_usuario" name="total_usuario" value="<?php echo $total?>">
+                    <input type="hidden" name="total_usuario" value="<?php echo $total?>">
 
-                    <input type="submit" name="submit" value="Procesar Compra">
+                    <input type="submit"  id="submit" name="submit" value="Procesar Compra" <?php echo $total == 0 ? "disabled":""?>>
                 </form>
             </div>
 
-        <?php }else{?>
-            <div class="container-noCarrito">
-                <img src="img/noCarrito1.png" alt="">
-                <div class="text-sin-productos">
-                        <p>Aun tienes productos en el carrito!!</p>
-                </div>
-            </div>
-
-        <?php }?>
 
         </div>
     </div>

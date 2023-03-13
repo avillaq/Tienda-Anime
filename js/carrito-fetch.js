@@ -82,6 +82,14 @@ function init() {
                         mostrarNotificacion("Producto eliminado", "correcto")
 
                         btn.parentElement.parentElement.remove();
+
+                        if(nuevoTotal===null){
+                            nuevoTotal=0.0;
+                            document.querySelector("#submit").disabled = true;
+                        }else{
+                            document.querySelector("#submit").disabled = false;
+                        }
+
                         document.querySelector("#totalCompra").textContent = `Total: $${nuevoTotal}`;
                         document.querySelector("#total_usuario").value = `${nuevoTotal}`;
 
@@ -95,5 +103,7 @@ function init() {
         });
 
     })
+
+
 
 }

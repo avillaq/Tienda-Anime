@@ -392,21 +392,6 @@ footer{
     background-color: #1fce13;
 }
 
-/* En caso no haya ningun producto en el carrito*/
-.container-noCarrito {
-    display: flex;
-    margin-bottom: 3rem;
-}
-.container-noCarrito .text-sin-productos{
-    display: flex;
-    align-items: center;
-}
-.container-noCarrito .text-sin-productos p{
-    font-weight: 900;
-    font-size: 2.5rem;
-    margin-left: 1rem;
-}
-
 /****************** Productos por Categoria ********************/
 .bg-categoria-producto{
     background: linear-gradient(241deg,#1d1919 10%,#F2295B61 100%);
