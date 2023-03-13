@@ -141,38 +141,50 @@ main {
 }
 /**************** Dashboard*****************/
 .contenedor-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 
-}
 .card-info{
+    flex: 0 0 33.3%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    background-color: #17a2b8;
-    border-radius: 0.5rem;
-}
-.card-info .text-icon{
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    padding-bottom: 1rem;
+
+    border-radius: 0.5rem;
+    min-height: 15rem;
+    max-width: 30rem;
+    margin: 2rem 0;
+
+    padding: 0 2rem;
 }
-.card-info .text-icon p{
+
+.card-info p{
     margin: 0;
 }
-.card-info .text-icon .cantidad{
+.card-info .cantidad{
     font-size: 4rem;
     font-weight: 700;
 }
 
-.card-info .text-icon i{
-    font-size: 6rem;
+.card-info i{
+    font-size: 8rem;
+    color: rgba(0,0,0,.15);
+    z-index: 0;
 }
-.card-info a{
-    background-color: #148a9d;
-    text-align: center;
-    border-radius: 0.5rem;
-    padding: 0.2rem 0;
+
+.card-blue{
+    background-color: #1785b8;
+}
+.card-red{
+    background-color:#dc3545;
+}
+.card-yellow{
+    background-color: #e9af02;
+}
+.card-green{
+    background-color: #28a745;
 }
 
 
