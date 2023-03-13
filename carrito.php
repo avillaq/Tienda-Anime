@@ -7,24 +7,26 @@
     <div class="wrapper">
         <h1>Carrito de Compras</h1>
         <div class="container-carrito">
+
+        <?php
+            try {
+                require "inc/funciones/conexionbd.php";
+
+                $id_user = $_SESSION['id_usuario'];
+                
+                /*Consulta para los carritos*/
+                $sql = "SELECT * FROM carritos WHERE id_usuario = $id_user";
+                $respuesta = $conn->query($sql);
+
+                /*Precio total de los pruductos*/
+                $total = 0;
+
+            } catch (Exception $e) {
+                echo "Error: ".$e->getMessage();
+            }
+        ?>
+        <?php if($respuesta->num_rows>0){  /*si el carrito tiene elemento, se enlistaran los productos y mostraremos el resumen*/?>
             <div class="container-lista">
-                <?php
-                    try {
-                        require "inc/funciones/conexionbd.php";
-
-                        $id_user = $_SESSION['id_usuario'];
-                        
-                        /*Consulta para los carritos*/
-                        $sql = "SELECT * FROM carritos WHERE id_usuario = $id_user";
-                        $respuesta = $conn->query($sql);
-
-                        /*Precio total de los pruductos*/
-                        $total = 0;
-
-                    } catch (Exception $e) {
-                        echo "Error: ".$e->getMessage();
-                    }
-                ?>
 
                 <?php while($carrito = $respuesta->fetch_assoc()){
                     $total += $carrito["total_carrito"];
@@ -55,6 +57,17 @@
                     <input type="submit" name="submit" value="Procesar Compra">
                 </form>
             </div>
+
+        <?php }else{?>
+            <div class="container-noCarrito">
+                <img src="img/noCarrito1.png" alt="">
+                <div class="text-sin-productos">
+                        <p>Aun tienes productos en el carrito!!</p>
+                </div>
+            </div>
+
+        <?php }?>
+
         </div>
     </div>
 
