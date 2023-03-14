@@ -24,6 +24,9 @@ img {
     max-width: 100%; /*Imagen responsiva*/
     width: 100%;
     display: inline-block;
+
+    -webkit-user-drag: none; /* Evita que las imagenes puedan ser arrastras*/
+    user-select: none; /* Evita que las imagenes puedan ser seleccionadas*/
 }
 ul {
     margin: 0; /*Elimina estacios en blaco innecesarios*/
@@ -592,3 +595,4 @@ input[type="submit"] {
     font-size: 2.5rem;
     margin-left: 1rem;
 }
+
