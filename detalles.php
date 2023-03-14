@@ -11,13 +11,14 @@
 
         $producto = $respuesta->fetch_assoc();
 
-        if(is_null($producto)){ /**Comprobamos que el id sea valido */
+        if(!isset($producto)){ /**Comprobamos que el id sea valido */
             header("Location:404.php");
             exit;
         }
 
-    } catch (Exception $e) {
-        echo "Error: ".$e->getMessage();
+    } catch (Exception $e) {/**cuando forzan el id en la url como una letra*/
+        header("Location:404.php");
+        exit;
     }
 
 ?>

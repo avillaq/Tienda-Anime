@@ -14,13 +14,14 @@
         $respuesta_categoria = $conn->query($stmt);
         $nombre_categoria = $respuesta_categoria->fetch_assoc();
 
-        if(is_null($nombre_categoria)){ /**Comprobamos que el id sea valido */
+        if(!isset($nombre_categoria)){ /**Comprobamos que el id sea valido */
             header("Location:404.php");
             exit;
         }
 
-    } catch (Exception $e) {
-        echo "Error: ".$e->getMessage();
+    } catch (Exception $e) {/**cuando forzan el id en la url como una letra*/
+        header("Location:404.php");
+        exit;
     }
 
 ?>
