@@ -27,7 +27,7 @@
 
                 /**Total usuario que tiene en la base de datos */
                 $total_usuario_bd = (float)$_SESSION["total_actual_usuario"];
-                
+
                 /**Aumentamos su Total usuario */
                 $total_usuario = $total_usuario + $total_usuario_bd;
 

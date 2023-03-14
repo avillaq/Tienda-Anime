@@ -1,5 +1,5 @@
 ## Redirigir todas las solicitudes que no son archivos o directorios existentes a la página de error 404 personalizada
-ErrorDocument 404 http://localhost/Tienda-Anime/404.html
+ErrorDocument 404 http://localhost/Tienda-Anime/404.php
 
 ################################################
 ##Las siguientes lineas de codigo sirven para ocultar la extencion de un archivo (.php ,.html)

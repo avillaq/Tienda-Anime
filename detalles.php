@@ -1,27 +1,32 @@
 <?php
+    /**Verificar si el ID enviado en la URL existe en la base de datos antes de mostrar los datos del producto */
+    try {
+        require "inc/funciones/conexionbd.php";
+
+        $id_producto = $_GET["id_producto"];
+
+        /*Consulta para los productos*/
+        $sql = "SELECT nombre_producto, precio_producto, url_img FROM productos WHERE id_producto = $id_producto";
+        $respuesta = $conn->query($sql);
+
+        $producto = $respuesta->fetch_assoc();
+
+        if(is_null($producto)){ /**Comprobamos que el id sea valido */
+            header("Location:404.php");
+            exit;
+        }
+
+    } catch (Exception $e) {
+        echo "Error: ".$e->getMessage();
+    }
+
+?>
+
+<?php
     require "inc/templates/header.php";
 ?>
     <div class="container-detalles">
         <div class="detalles">
-
-        <?php
-                try {
-                    require "inc/funciones/conexionbd.php";
-
-                    $id_producto = $_GET["id_producto"];
-
-                    /*Consulta para los productos*/
-                    $sql = "SELECT nombre_producto, precio_producto, url_img FROM productos WHERE id_producto = $id_producto";
-                    $respuesta = $conn->query($sql);
-
-                    $producto = $respuesta->fetch_assoc();
-
-                } catch (Exception $e) {
-                    echo "Error: ".$e->getMessage();
-                }
-
-            ?>
-
 
             <img src="img/productos/<?php echo $producto["url_img"]?>" alt="">
 

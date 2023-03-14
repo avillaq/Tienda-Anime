@@ -1,27 +1,35 @@
 <?php
+    /**Verificar si el ID enviado en la URL existe en la base de datos antes de mostrar los datos del producto */
+    try {
+        require "inc/funciones/conexionbd.php";
+
+        $id_categoria = $_GET["id_categoria"];
+
+        /*Consulta para los productos*/
+        $sql = "SELECT * FROM productos WHERE categoria_id = $id_categoria ";
+        $respuesta = $conn->query($sql);
+
+        /*Consulta solo para el nombre de la categoria*/
+        $stmt = "SELECT nombre_categoria FROM categorias WHERE id_categoria = $id_categoria";
+        $respuesta_categoria = $conn->query($stmt);
+        $nombre_categoria = $respuesta_categoria->fetch_assoc();
+
+        if(is_null($nombre_categoria)){ /**Comprobamos que el id sea valido */
+            header("Location:404.php");
+            exit;
+        }
+
+    } catch (Exception $e) {
+        echo "Error: ".$e->getMessage();
+    }
+
+?>
+
+<?php
     require "inc/templates/header.php";
 ?>
 
-            <?php
-                try {
-                    require "inc/funciones/conexionbd.php";
-
-                    $id_categoria = $_GET["id_categoria"];
-
-                    /*Consulta para los productos*/
-                    $sql = "SELECT * FROM productos WHERE categoria_id = $id_categoria ";
-                    $respuesta = $conn->query($sql);
-
-                    /*Consulta solo para el nombre de la categoria*/
-                    $stmt = "SELECT nombre_categoria FROM categorias WHERE id_categoria = $id_categoria";
-                    $respuesta_categoria = $conn->query($stmt);
-                    $nombre_categoria = $respuesta_categoria->fetch_assoc();
-
-                } catch (Exception $e) {
-                    echo "Error: ".$e->getMessage();
-                }
-
-            ?>
+            
 
     <div style="background-image:url('img/categorias/bg.png');">
         <div class="bg-categoria-producto" style="">
