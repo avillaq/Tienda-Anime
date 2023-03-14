@@ -1,0 +1,19 @@
+## Redirigir todas las solicitudes que no son archivos o directorios existentes a la página de error 404 personalizada
+ErrorDocument 404 http://localhost/Tienda-Anime/404.html
+
+################################################
+##Las siguientes lineas de codigo sirven para ocultar la extencion de un archivo (.php ,.html)
+##Para que realmente pueda ser vista en accion, se tiene que borrar la extencion (.php ,.html)
+##de todos los enlaces (etiqueta <a></a>, etc...) del proyecto. 
+
+## Activar el motor de reescritura
+#RewriteEngine On
+
+# Ocultar la extencion php del proyecto
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule ^(.*)$ $1.php
+
+################################################
+
+
