@@ -67,6 +67,7 @@
         </div>
     </div>
 
+    
 <?php
     require "inc/templates/footer.php";
 ?>

@@ -15,7 +15,6 @@ if($_POST['tipoAccion'] === "loginOut"){
     $respuesta = array(
         "respuesta" => "exito"
     );
-    
     echo json_encode($respuesta);
 }
 

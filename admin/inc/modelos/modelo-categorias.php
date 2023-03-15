@@ -149,7 +149,6 @@ else if($_POST['tipoAccion'] === "borrar"){
         );
 
     }
-
     echo json_encode($respuesta);
     
 }

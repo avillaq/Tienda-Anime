@@ -70,7 +70,6 @@
         
     </div>
     
-
 <?php
     require "inc/templates/servicios.php";
     require "inc/templates/footer.php";

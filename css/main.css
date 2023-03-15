@@ -18,8 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-
 }
+
 img {
     max-width: 100%; /*Imagen responsiva*/
     width: 100%;

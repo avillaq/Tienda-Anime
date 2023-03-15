@@ -4,7 +4,7 @@ ErrorDocument 404 http://localhost/Tienda-Anime/404.php
 ################################################
 ##Las siguientes lineas de codigo sirven para ocultar la extencion de un archivo (.php ,.html)
 ##Para que realmente pueda ser vista en accion, se tiene que borrar la extencion (.php ,.html)
-##de todos los enlaces (etiqueta <a></a>, etc...) del proyecto. 
+##de todos los enlaces (etiqueta <a></a>, etc...) del  proyecto. 
 
 ## Activar el motor de reescritura
 #RewriteEngine On

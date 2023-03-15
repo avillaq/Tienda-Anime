@@ -30,10 +30,8 @@ require "inc/templates/header.php";
                 </form>
             </div>
 
-
         </div>
     </div>
-
 
  <?php
 require "inc/templates/footer.php";

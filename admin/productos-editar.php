@@ -79,7 +79,6 @@ require "inc/templates/header.php";
         </div>
     </div>
 
-
  <?php
 require "inc/templates/footer.php";
 ?>

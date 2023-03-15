@@ -41,7 +41,6 @@
                 $isProductos = str_contains($archivo, "productos");
                 $isCategorias = str_contains($archivo, "categorias");
 
-
                 ?>
 
                 <a class="<?php echo str_contains($archivo, "index")? "active" : "";?>" href="index.php">Dashboard</a>

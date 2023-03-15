@@ -25,7 +25,6 @@ function init(){
 
     }
 
-
     /** Validamos que el archivo de imagen no sea muy pesado  */
     const inputFile = document.querySelector("#input-file");
     inputFile.addEventListener("change",function(e){

@@ -100,7 +100,6 @@ else if($_POST['tipoAccion'] === "register"){
             "respuesta" => $e->getMessage()
         );
     }
-
     echo json_encode($respuesta);
     
 }

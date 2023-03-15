@@ -20,7 +20,6 @@ if(isset($_POST["submit"])){
     $id_usuario = htmlspecialchars($_POST["id_usuario"]);
 
     $total = (float) htmlspecialchars($_POST["total_usuario"]);  
-
 }
 
 $compra = new Payer();

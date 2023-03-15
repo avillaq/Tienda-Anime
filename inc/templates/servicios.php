@@ -14,4 +14,4 @@
                 <h3>Envíos en 7-14 días</h3>
                 <P>Debido a la creciente demanda de nuestros productos los envíos pueden demorarse a 7-14 días.</P> 
             </div>
-        </div>
+</div>

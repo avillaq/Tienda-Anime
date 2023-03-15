@@ -62,7 +62,6 @@ if($_POST['tipoAccion'] === "añadir"){
             "respuesta" => $e->getMessage()
         );
     }
-
     echo json_encode($respuesta);
 }
     

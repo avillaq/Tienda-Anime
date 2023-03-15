@@ -172,6 +172,7 @@ function init() {
             return inputName.trim()==="";
         }
     }
+    
     //Notificacion en pantalla
     function mostrarNotificacion(mensaje, clase) {
         const notificacion = document.createElement("div");

@@ -29,8 +29,7 @@
 <?php
     require "inc/templates/header.php";
 ?>
-
-            
+         
 
     <div style="background-image:url('img/categorias/bg.png');">
         <div class="bg-categoria-producto" style="">

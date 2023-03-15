@@ -96,7 +96,6 @@ else if($_POST['tipoAccion'] === "editar"){
             "respuesta" => $e->getMessage()
         );
     }
-
     echo json_encode($respuesta);
 }
 
