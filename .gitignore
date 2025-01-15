@@ -2,9 +2,6 @@
 .DS_Store
 Thumbs.db
 
-# Ignorar archivos de configuración
-config.php
-
 # Ignorar directorios de dependencias
 /vendor/
 
