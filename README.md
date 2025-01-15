@@ -70,11 +70,11 @@ PAYPAL_MODE=sandbox
 
 ## 👥 Usuarios por defecto
 - **Administrador**
- - Usuario: admin
- - Contraseña: admin
+  - Usuario: admin
+  - Contraseña: admin
 - **Usuario**
- - Usuario: juan
- - Contraseña: juan
+  - Usuario: juan
+  - Contraseña: juan
 
 ## 📄 Licencia
 Este proyecto está bajo la Licencia MIT - mira el archivo `LICENSE` para detalles
