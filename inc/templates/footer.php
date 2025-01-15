@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy;2023 Tienda Anime - All Rights Reserved.</p>
+                <p>&copy;2025 Tienda Anime - All Rights Reserved.</p>
             </div>
         </div>
 
