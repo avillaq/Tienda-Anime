@@ -1,4 +1,5 @@
 <?php
+    require_once dirname(__DIR__) . "/config.php";
     require "PayPal-PHP-SDK/autoload.php";
 
     define("URL_SITIO","http://localhost/Tienda-Anime");
@@ -6,9 +7,9 @@
     $apiContext = new \PayPal\Rest\ApiContext(
         new \PayPal\Auth\OAuthTokenCredential(
             //Cliente id
-            "ARfvAhsuVBGwM8UG2fveO3OZrvFjHW-7VNCcJDMi-f4Tx2cQTgtrXgcaciXdes-KnDum82_XyRQRieY0",
+            getenv("PAYPAL_CLIENT_ID"),
             //Secret
-            "EAr-V6mRncaD4AZUCpugULXU7enjI5sZNYLw2NdzK4ysul5UEkBfRLtXaYAeikTbE5XNnFybz5UT4LLK"
+            getenv("PAYPAL_CLIENT_SECRET")
         )
     );
 
