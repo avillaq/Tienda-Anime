@@ -1,0 +1,26 @@
+# Ignorar archivos y directorios generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de configuración
+config.php
+
+# Ignorar directorios de dependencias
+/vendor/
+
+# Ignorar archivos de logs
+/log/
+
+# Ignorar archivos de caché
+/cache/
+
+# Ignorar archivos de respaldo
+*.bak
+*.swp
+*.~*
+
+# Ignorar archivos de configuración de IDEs
+.idea/
+.vscode/
+
+.env
