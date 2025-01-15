@@ -1,12 +1,83 @@
-# Tienda-Anime
-El proyecto de la tienda virtual es una aplicación web que permite a los usuarios realizar compras en línea de una variedad de productos. Está desarrollado utilizando PHP como lenguaje de programación y MySQL como base de datos.
+# 🏪 Tienda Anime 
 
-La aplicación cuenta con un sistema de autenticación y autorización basado en sesiones que permite a los usuarios acceder a sus cuentas y realizar compras en línea de forma segura.
+Una tienda virtual de productos de anime desarrollada con PHP, MySQL y JavaScript. Permite a los usuarios comprar productos relacionados con anime como figuras, ropa y accesorios.
 
-La aplicación también tiene un sistema de administración de productos, usuarios y categorías que permite a los administradores agregar, eliminar y modificar los productos disponibles para la venta, así como administrar los usuarios y categorías de productos.
+![inicio](screenshots/home.png)
+![categorias](screenshots/categorias.png)
+![producto](screenshots/producto.png)
+![carrito](screenshots/carrito.png)
+![admin](screenshots/admin.png)
 
-La implementación de PayPal es el medio de pago exclusivo para los usuarios que deseen realizar sus compras en línea en la tienda virtual. La aplicación cuenta con una integración de la API de PayPal, lo que permite a los usuarios pagar sus compras con una cuenta de PayPal.
+## ✨ Características
 
-La aplicación utiliza JavaScript para mejorar la experiencia del usuario al realizar acciones de forma dinámica sin necesidad de recargar la página, por ejemplo, al agregar un producto al carrito de compras, la página se actualiza automáticamente para mostrar la cantidad de productos y el precio total del pedido.
+- 🛍️ Catálogo de productos organizados por categorías de anime
+- 🛒 Carrito de compras
+- 💳 Integración con PayPal para pagos
+- 👤 Sistema de registro y autenticación de usuarios
+- 📱 Diseño responsive
+- ⚡ Operaciones AJAX para mejor experiencia de usuario
+- 🔐 Panel de administración para gestionar:
+  - Productos
+  - Categorías  
+  - Usuarios
+  - Ventas
 
-En resumen, este proyecto de tienda virtual con PHP, base de datos, JavaScript, implementación de PayPal y sistema de administración de productos, usuarios y categorías, y sesiones, permite a los usuarios comprar productos en línea de forma segura y fácil, y a los administradores gestionar los productos y usuarios del sitio web de manera eficiente.
+## 🛠️ Tecnologías
+
+- PHP 8.1
+- MySQL 
+- JavaScript
+- HTML5
+- CSS3
+- PayPal REST API
+- SweetAlert2
+
+## 📋 Requisitos
+
+- PHP >= 8.1
+- MySQL/MariaDB
+- Servidor web (Apache/Nginx)
+- Cuenta de PayPal Developer
+
+## 🚀 Instalación
+
+1. Clona este repositorio:
+```bash
+git clone https://github.com/avillaq/Tienda-Anime.git
+```
+
+2. Importa la base de datos:
+```bash
+mysql -u root -p < animetienda.sql
+```
+
+3. Configura las variables de entorno copiando `.env.example` a `.env`:
+```bash
+cp .env.example .env
+```
+
+4. Configura las siguientes variables en el archivo `.env`:
+```bash
+DB_HOST=localhost
+DB_USER=root 
+DB_PASS=tu_password
+DB_NAME=tiendaanime
+
+PAYPAL_CLIENT_ID=tu_client_id
+PAYPAL_CLIENT_SECRET=tu_client_secret
+PAYPAL_MODE=sandbox
+```
+
+## 👥 Usuarios por defecto
+- **Administrador**
+ - Usuario: admin
+ - Contraseña: admin
+- **Usuario**
+ - Usuario: juan
+ - Contraseña: juan
+
+## 📄 Licencia
+Este proyecto está bajo la Licencia MIT - mira el archivo `LICENSE` para detalles
+
+## ✍️ Autor
+Alexander VQ - [@avillaq](https://github.com/avillaq)
