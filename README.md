@@ -68,10 +68,7 @@ PAYPAL_CLIENT_SECRET=tu_client_secret
 PAYPAL_MODE=sandbox
 ```
 
-## 👥 Usuarios por defecto
-- **Administrador**
-  - Usuario: admin
-  - Contraseña: admin
+## 👥 Usuario por defecto
 - **Usuario**
   - Usuario: juan
   - Contraseña: juan
